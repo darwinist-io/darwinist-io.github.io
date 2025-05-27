@@ -14,7 +14,7 @@ title: Documents
           <div class="card h-100 shadow-sm">
             <div class="card-body">
               <h5 class="card-title">
-                <a href="{{ doc.url }}" class="text-decoration-none">{{ doc.title }}</a>
+                <a href="{{ doc.url | relative_url }}" class="text-decoration-none">{{ doc.title }}</a>
               </h5>
               {% if doc.subtitle %}
               <p class="card-text text-muted">{{ doc.subtitle }}</p>
