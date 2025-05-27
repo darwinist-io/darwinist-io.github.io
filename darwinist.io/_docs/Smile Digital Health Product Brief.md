@@ -1,3 +1,12 @@
+---
+layout: document
+title: "Smile Digital Health: FHIR-Based Healthcare Interoperability Platform"
+subtitle: "Enterprise-Grade Data Management and Digital Transformation Solutions for Healthcare Organizations"
+date: 2025-05-27
+author: "Darwinist Team"
+tags: ["FHIR", "Healthcare Interoperability", "Digital Health", "Data Management", "Healthcare IT", "HL7", "Clinical Quality"]
+---
+
 **Product Brief: Smile Digital Health**
 
 ### **Company Overview**

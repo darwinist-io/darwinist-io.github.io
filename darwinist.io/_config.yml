@@ -15,7 +15,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Exploring the evolution of medical AI, data standards, and clinical innovation
   to drive better patient outcomes and operational efficiency.
 baseurl: "" # Leave empty if using custom domain
-url: "https://darwinist.io" # Your custom domain or https://username.github.io
+url: "https://darwinist-io.github.io" # Your custom domain or https://username.github.io
 
 # Build settings
 markdown: kramdown
