@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<div class="container my-5">
+  <h1 class="mb-4">{{ page.title }}</h1>
+  {% if page.subtitle %}
+    <p class="lead">{{ page.subtitle }}</p>
+  {% endif %}
+
+  {% for partner in page.partners %}
+    <div class="p-5 mb-5 rounded-3 position-relative" style="background: url('{{ partner.background_image }}') center center/cover no-repeat; min-height: 320px;">
+      <div class="row align-items-center" style="background: rgba(255,255,255,0.85); border-radius: 1rem; min-height: 320px;">
+        <div class="col-md-3 text-center py-4">
+          {% if partner.logo %}
+            <img src="{{ partner.logo }}" alt="{{ partner.name }} logo" class="img-fluid mb-3" style="max-height:120px; object-fit:contain;">
+          {% endif %}
+          {% if partner.link %}
+            <div>
+              <a href="{{ partner.link }}" class="btn btn-primary btn-sm mb-2" target="_blank" rel="noopener">Visit Website</a>
+            </div>
+          {% endif %}
+          {% if partner.more_info %}
+            <div>
+              <a href="{{ partner.more_info }}" class="btn btn-outline-secondary btn-sm">More Info</a>
+            </div>
+          {% endif %}
+        </div>
+        <div class="col-md-9 py-4">
+          <h2 class="fw-bold">{{ partner.name }}</h2>
+          {% if partner.open_text %}
+            <p>{{ partner.open_text }}</p>
+          {% endif %}
+          {% if partner.bullets %}
+            <ul class="mb-3">
+                {% for bullet in partner.bullets %}
+                <li>{{ bullet }}</li>
+                {% endfor %}
+            </ul>
+          {% endif %}
+          {% if partner.close_text %}
+            <p class="text-muted">{{ partner.close_text }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
