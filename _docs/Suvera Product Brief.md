@@ -5,6 +5,8 @@ subtitle: "CQC-Registered NHS-Approved Virtual Clinic for Long-Term Condition Ca
 date: 2025-05-27
 author: "Darwinist Team"
 tags: ["Digital Health", "Chronic Disease Management", "NHS", "Virtual Care", "Population Health", "Hypertension Management"]
+excerpt: "CQC-registered digital healthcare provider specializing in chronic disease management for NHS Primary Care Networks, offering AI-driven risk stratification, virtual clinic services, and automated patient monitoring that reduces clinical workload while achieving 12.65 mmHg average blood pressure reductions."
+
 ---
 
 

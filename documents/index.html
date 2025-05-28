@@ -16,8 +16,8 @@ title: Documents
               <h5 class="card-title">
                 <a href="{{ doc.url | relative_url }}" class="text-decoration-none">{{ doc.title }}</a>
               </h5>
-              {% if doc.subtitle %}
-              <p class="card-text text-muted">{{ doc.subtitle }}</p>
+              {% if doc.excerpt %}
+              <p class="card-text text-muted">{{ doc.excerpt }}</p>
               {% endif %}
               {% if doc.date %}
               <small class="text-muted">

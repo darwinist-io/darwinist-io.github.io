@@ -5,6 +5,7 @@ subtitle: "UK Context 2025 - Comprehensive Framework for Radiologists and Radiog
 date: 2025-05-27
 author: "Darwinist Team"
 tags: ["Medical AI", "Radiology Training", "Healthcare Certification", "Clinical AI Safety", "NHS", "Medical Imaging", "Professional Development"]
+excerpt: "Toronto-based healthcare technology company specializing in FHIR standards and interoperability solutions, offering enterprise-grade platforms for digital transformation including HAPI FHIR, Clinical Quality Intelligence Suite, and Master Data Management for healthcare organizations worldwide."
 ---
 
 ## **Executive Summary**

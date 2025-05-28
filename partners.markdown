@@ -16,7 +16,7 @@ partners:
     logo: /assets/Laurel_Bridge_Software_Logo.jpg
     link: https://laurelbridge.com/
     background_image: /assets/newark-delaware.jpg
-    more_info: /partners/laurel_bridge
+    more_info: /docs/laurel-bridge/
     
   - name: medDream
     open_text: | 
@@ -30,7 +30,7 @@ partners:
     logo: /assets/meddream.png
     link: https://meddream.com/
     background_image: /assets/kaunas-main.jpeg
-    more_info: /partners/meddream
+    more_info: /docs/meddream/
 
 ---
 

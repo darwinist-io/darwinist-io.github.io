@@ -5,6 +5,7 @@ subtitle: "Enterprise-Grade Data Management and Digital Transformation Solutions
 date: 2025-05-27
 author: "Darwinist Team"
 tags: ["FHIR", "Healthcare Interoperability", "Digital Health", "Data Management", "Healthcare IT", "HL7", "Clinical Quality"]
+excerpt: "Toronto-based healthcare technology company specializing in FHIR standards and interoperability solutions, offering enterprise-grade platforms for digital transformation including HAPI FHIR, Clinical Quality Intelligence Suite, and Master Data Management for healthcare organizations worldwide."
 ---
 
 **Product Brief: Smile Digital Health**

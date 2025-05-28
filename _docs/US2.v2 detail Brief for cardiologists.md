@@ -5,6 +5,8 @@ subtitle: "Advanced Automated Cardiac Imaging Analysis for Cardiologists"
 date: 2025-05-27
 author: "Darwinist Team"
 tags: ["Cardiology", "Echocardiography", "AI Medical Imaging", "Clinical Decision Support", "Cardiac Diagnostics"]
+excerpt: "AI solution that automates analysis of adult transthoracic echocardiograms, measuring 45+ cardiac parameters including ejection fraction, global longitudinal strain, and diastolic function metrics, reducing exam time by 70% while improving diagnostic consistency and accuracy for cardiologists."
+
 ---
 
 ### **Brief: Us2.v2 for Cardiologists**

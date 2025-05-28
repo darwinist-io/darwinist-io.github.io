@@ -5,6 +5,7 @@ subtitle: "A PRSB-aligned framework for evaluating FHIR compatibility and data s
 date: 2025-05-27
 author: "Darwinist Team"
 tags: ["Healthcare Data", "FHIR", "Clinical AI", "Data Quality", "EHR Systems", "PRSB"]
+excerpt: "Three-tier framework (Green, Orange, Red) for assessing EHR data readiness in clinical AI applications, evaluating structural integrity, semantic richness, and FHIR standards alignment to ensure safe AI deployment while supporting PRSB interoperability goals."
 ---
 
 ## **Traffic Light Grading Scheme for EHR Data Readiness in Clinical AI Applications**

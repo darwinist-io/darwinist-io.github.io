@@ -5,6 +5,8 @@ subtitle: "Advanced Patient Triage and Clinical Workflow Optimization Solution"
 date: 2025-05-27
 author: "Darwinist Team"
 tags: ["Healthcare AI", "Patient Triage", "Clinical Decision Support", "Medical Technology", "Bayesian Models"]
+excerpt: "MDR-certified AI triage system using probabilistic Bayesian models and NLP to analyze patient symptoms via free text input, providing dynamic diagnostic assessments with 1-8 urgency scaling and differential diagnoses, demonstrating 50% reduction in GP appointments through intelligent patient navigation and workflow optimization."
+
 ---
 
 **Product Brief: Visiba Red Robin**

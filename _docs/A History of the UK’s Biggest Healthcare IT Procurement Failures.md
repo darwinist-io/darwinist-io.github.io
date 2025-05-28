@@ -5,9 +5,9 @@ subtitle: "Costly Lessons from £50+ Billion in Failed NHS IT Projects"
 date: 2025-05-27
 author: "Darwinist Team"
 tags: ["NHS", "Healthcare IT", "Procurement Failures", "Digital Transformation"]
----
+excerpt: "Comprehensive analysis of the UK's most expensive healthcare IT failures, from the £10+ billion NPfIT disaster to the £37 billion Test and Trace program, examining why centralized top-down approaches, vendor complexity underestimation, and poor stakeholder engagement led to over £50 billion in wasted public funds across two decades of failed NHS digitization attempts."
 
-### **Costly Lessons: A History of the UK’s Biggest Healthcare IT Procurement Failures**
+---
 
 ### **1\. National Programme for IT (NPfIT) – £10 Billion+**
 

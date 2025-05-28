@@ -5,6 +5,7 @@ subtitle: "Automated Retrieval and Movement of Prior Imaging Studies in Clinical
 date: 2025-05-27
 author: "Darwinist Team"
 tags: ["DICOM", "Medical Imaging", "Workflow Automation", "Healthcare IT", "PACS", "HL7"]
+excerpt: "Enterprise-grade DICOM and HL7 routing platform that intelligently manages medical data flows between healthcare IT systems, supporting high-throughput environments with rules-based logic, AI integration capabilities, and comprehensive security compliance for PACS, VNA, and multi-site radiology networks."
 ---
 
 ## **Technical Brief: Laurel Bridge Navigator**
