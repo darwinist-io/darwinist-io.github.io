@@ -1,5 +1,5 @@
 ---
-layout: team
+layout: default
 title: Our Team
 team:
 - name: Andrew Holway
