@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Science In Silico: Medical Imaging & High Performance Computing"
-date: 2025-04-26 12:46:26 +0100
+date: 2025-04-26
 categories: [medical-imaging, hpc, ai-diagnostics]
 excerpt: "In this article, we look at 8 companies who are developing radiological diagnostic products, and see how HPC enabled, AI-enhanced diagnostic tools are enhancing physicians' diagnostic workflows, and ultimately creating a more streamlined patient experience."
 ---

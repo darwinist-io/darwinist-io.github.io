@@ -38,7 +38,7 @@ def export_layers_as_png(image_path, output_dir):
 
 def run_batch():
     image_path = 'logos_for_main_page.xcf'
-    output_dir = '../darwinist.io/assets/images'
+    output_dir = '../assets/images'
     export_layers_as_png(image_path, output_dir)
 
 if __name__ == '__main__':
