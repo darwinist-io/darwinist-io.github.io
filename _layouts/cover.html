@@ -76,7 +76,9 @@ layout: default
         <div class="row g-4">
         {% for image in page.gallery %}
         <div class="col-md-6">
-            <img src="{{ image }}" class="img-fluid rounded shadow" alt="Healthcare photo">
+            <div class="ratio ratio-16x9">
+                <img src="{{ image }}" class="img-fluid rounded shadow object-fit-cover" alt="Healthcare photo">
+            </div>
         </div>
         {% endfor %}
         </div>
