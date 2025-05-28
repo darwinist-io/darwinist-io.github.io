@@ -10,6 +10,8 @@ excerpt: "According to the World Health Organisation, large language models (LLM
 
 
 *![][image1]*
+
+
 *Fancy letting ChatGPT take a look at that lump?*
 
 According to the World Health Organisation, large language models (LLMs) have been adopted faster than any consumer application in history. Chances are you’ve already played around on ChatGPT. Maybe you’re even one of the 20% of UK GPs who use it in their daily clinical practice.
