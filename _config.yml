@@ -76,3 +76,10 @@ exclude:
   - vendor/ruby/
   - README.md
   - LICENSE
+
+
+  # Include directories for GitHub Pages
+include:
+  - blog
+  - team
+  - partners
