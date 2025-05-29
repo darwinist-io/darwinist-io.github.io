@@ -1,7 +1,7 @@
 ---
 layout: document
 title: "Darwinist DICOM Exchange: National Level Medical Imaging Platform"
-subtitle: "Cloud-native medical imaging exchange platform built on Azure DICOM/FHIR services, Laurel Bridge routing engines, and MedDream viewer, offering secure federated image sharing, AI-ready infrastructure, and browser-based diagnostics as a modern alternative to traditional HSCN-restricted imaging networks."
+subtitle: "Cloud-native medical imaging exchange platform built on Azure DICOM/FHIR services, Laurel Bridge routing engines, and MedDream viewer, offering secure federated image sharing, AI-ready infrastructure, and browser-based diagnostics as a modern alternative to Sectra's monopolistic imaging network, IEP."
 date: 2025-05-27
 author: "Darwinist Team"
 tags: ["DICOM", "Medical Imaging", "NHS", "Cloud Technology", "FHIR", "Healthcare Infrastructure", "AI Integration"]

@@ -26,7 +26,7 @@ partners:
         - Certified for diagnostic use, including CT, MRI, CR, DX, US, PET, NM, XA, RF & Mammo.
         - Seamless integration with PACS and VNA systems
     close_text: |
-        Spun out of Softneta in 2024, and  aquired by German radiology information systems developer medavis. medDream continues to lead in zero footprint medical imaging viewers.
+        medDream leads in zero footprint medical imaging viewer technology for a wide variety of use cases.
     logo: /assets/meddream.png
     link: https://meddream.com/
     background_image: /assets/kaunas-main.jpeg
