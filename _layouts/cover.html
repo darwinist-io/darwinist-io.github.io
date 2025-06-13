@@ -25,21 +25,17 @@ layout: default
                 <h2 class="mb-5 text-center display-5">{{ page.about_title }}</h2>
                 
                 <div class="row g-4">
-                    {% for section in page.about_bullets %}
+                    {% for item in page.about_items %}
                     <div class="col-md-4">
                         <div class="card h-100 shadow-sm">
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="flex-shrink-0 me-3">
-                                        <i class="{{ section.icon }} text-primary" style="font-size: 2rem;"></i>
+                                        <i class="{{ item.icon }} text-primary" style="font-size: 2rem;"></i>
                                     </div>
-                                    <h5 class="card-title mb-0">{{ section.section }}</h5>
+                                    <h5 class="card-title mb-0">{{ item.title }}</h5>
                                 </div>
-                                <ul class="card-text ps-3">
-                                    {% for bullet in section.bullets %}
-                                    <li>{{ bullet }}</li>
-                                    {% endfor %}
-                                </ul>
+                                <p class="card-text">{{ item.text }}</p>
                             </div>
                         </div>
                     </div>

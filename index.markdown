@@ -42,27 +42,6 @@ about_items:
   - icon: "fas fa-cloud"
     title: "Flexible Solutions"
     text: "Darwinist provides flexible, scalable, and compliant integration solutions. Whether on-premises or in the cloud, we provide the technical expertise needed to bring cutting-edge solutions to healthcare systems of all sizes."
-about_bullets:
-  - section: "Flexible Solutions"
-    icon: "fas fa-cogs"
-    bullets:
-      - "Consolidates multiple clinical applications into one manageable platform"
-      - "Uses engineering expertise to handle complex integrations behind the scenes"
-      - "Delivers a friction-free rollout that works with hospitals’ existing IT systems"
-
-  - section: "Strategic Partnership"
-    icon: "fas fa-handshake"
-    bullets:
-      - "Treats these teams as core stakeholders in every implementation decision"
-      - "Unifies a fragmented vendor landscape into a single, standardised workflow"
-      - "Lowers in-house technical load and builds stronger business cases for leadership approval"
-
-  - section: "Technical Integration"
-    icon: "fas fa-cogs"
-    bullets:
-      - "Offers deployment options on-premises, in the cloud, or hybrid as needs evolve"
-      - "Scales easily from single departments to multi-site health-system rollouts"
-      - "Ensures every solution meets stringent security, privacy and regulatory standards"
 gallery:
   - /assets/bolton-mri-scanner.jpg
   - /assets/radiographer-buckinghamshire.jpg
