@@ -31,8 +31,47 @@ cards_widget:
     description: A simple yet powerful web display framework.
     image: /assets/images/bootstrap-logo.png
 about_text: true
-about_title: "We are distributors and integrators of healthcare applications."
+about_title: "Next-generation clinical information system purpose-built for the realities of modern care delivery."
+
 about_items:
+  - title: "Clinical Information System"
+    image: "assets/images/letterboxes/clinical-information-system.png"
+    strapline: "FHIR-native clinical data and workflow backbone"
+    cost: "£1 per patient per year"
+    features:
+      - "Rapid pathway development"
+      - "Built on FHIR UK Core from day one"
+      - "End-to-end patient record management"
+      - "Seamless interoperability"
+      - "Zero integration fees or consulting overhead"
+
+  - title: "Radiology Module"
+    image: "assets/images/letterboxes/radiology.png"
+    strapline: "A single open-standard system for radiology"
+    cost: "+£1 per patient per year"
+    features:
+      - "Built on DicomWeb open standard"
+      - "Enables advanced teleradiology workflows"
+      - "Integrates AI as teleradiology services"
+      - "High-performance image viewer"
+      - "AI Medical device authoring tools"
+    
+
+
+  - title: "Summary AI Module"
+    image: "assets/images/letterboxes/ai_summary.png"
+    strapline: "Longitudinal patient record summaries"
+    cost: "+£1 per patient per year"
+    features:
+      - "Clinician-validated summaries"
+      - "Discharge notes, letters & care plans"
+      - "Doctor in the loop AI workflows"
+      - "Fully auditable AI pathways"
+      - "AI Medical device authoring tools"
+
+
+
+about_items_old:
   - icon: "fas fa-cogs"
     title: "Technical Integration"
     text: "Darwinist offers a streamlined solution for implementing game changing healthcare software tools into clinical settings. We simplify the deployment and management of multiple concurrent applications, using our engineering expertise to provide seamless integration into existing IT systems."

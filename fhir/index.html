@@ -1,0 +1,94 @@
+---
+layout: default
+title: FHIR Resources
+description: "Comprehensive guide to FHIR resources used in healthcare data management and interoperability"
+---
+
+{% assign fhir_data = site.pages | where: "name", "fhir.markdown" | first %}
+
+<div class="container-fluid p-0">
+    <!-- Hero Section -->
+    <section class="bg-dark text-white text-center py-5">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+        <div class="col-auto">
+            <img src="{{ site.baseurl }}/assets/fhir-logo.png" alt="HL7 FHIR Logo" class="mb-3" style="max-height: 80px;">
+        </div>
+        <div class="col-auto">
+            <h1 class="display-4 fw-bold mb-3">The Darwinist Guide to FHIR Resources</h1>
+        </div>
+        </div>
+        <p class="lead mb-4">{{ fhir_data.fhir.fhir_text }}</p>
+    </div>
+    </section>
+
+
+  <!-- All FHIR Resources in Two Columns -->
+  <section class="container py-5">
+    <div class="row g-4">
+      {% for group in fhir_data.fhir.fhir_resources %}
+        {% for resource in group[1] %}
+          <div class="col-lg-6">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-header bg-{{ resource.bootstrap_colour }} text-white">
+                <div class="row align-items-center">
+                  <div class="col-auto">
+                    <i class="{{ resource.fhir_icon }} fa-2x"></i>
+                  </div>
+                  <div class="col">
+                    <h3 class="card-title mb-1">{{ resource.fhir_resource }}</h3>
+                    <p class="card-subtitle mb-0 opacity-75">{{ resource.fhir_description }}</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12">
+                    {% if resource.fhir_long_form %}
+                      <div class="fhir-content text-muted">
+                        {{ resource.fhir_long_form | markdownify }}
+                      </div>
+                    {% else %}
+                      <p class="text-muted">{{ resource.fhir_description }}</p>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </section>
+
+</div>
+
+<style>
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+
+.fhir-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.fhir-content p:last-child {
+  margin-bottom: 0;
+}
+
+.card-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card-subtitle {
+  font-size: 1rem;
+}
+</style>

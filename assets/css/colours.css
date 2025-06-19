@@ -1,0 +1,104 @@
+/* ──────────────────────────────────────────────────────────────
+   bootstrap-nhs.css   (v1.0.0)
+   Load after Bootstrap ≥5.3.  No Sass build step required.
+   Source: https://nhsengland.github.io/nhs-r-reporting/tutorials/nhs-colours.html
+   ──────────────────────────────────────────────────────────── */
+
+/* 1. Root-level CSS variables re-mapping Bootstrap semantics */
+:root{
+    --bs-primary:#005EB8;        /* NHS Blue                    */
+    --bs-secondary:#768692;      /* Mid Grey                    */
+    --bs-success:#009639;        /* Green                       */
+    --bs-info:#00A499;           /* Aqua Green                  */
+    --bs-warning:#FFB81C;        /* Warm Yellow                 */
+    --bs-danger:#DA291C;         /* Emergency Red               */
+    --bs-light:#E8EDEE;          /* Pale Grey                   */
+    --bs-dark:#003087;           /* Dark Blue                   }
+  
+    /* Extra NHS brand tokens (prefixed with –bs-nhs-)            */
+    --bs-nhs-blue:#005EB8;
+    --bs-nhs-dark-blue:#003087;
+    --bs-nhs-bright-blue:#0072CE;
+    --bs-nhs-light-blue:#41B6E6;
+    --bs-nhs-aqua-blue:#00A9CE;
+  
+    --bs-nhs-black:#231F20;
+    --bs-nhs-dark-grey:#425563;
+    --bs-nhs-mid-grey:#768692;
+    --bs-nhs-pale-grey:#E8EDEE;
+  
+    --bs-nhs-dark-green:#006747;
+    --bs-nhs-green:#009639;
+    --bs-nhs-light-green:#78BE20;
+    --bs-nhs-aqua-green:#00A499;
+  
+    --bs-nhs-purple:#330072;
+    --bs-nhs-dark-pink:#7C2855;
+    --bs-nhs-pink:#AE2573;
+    --bs-nhs-dark-red:#8A1538;
+    --bs-nhs-orange:#ED8B00;
+    --bs-nhs-warm-yellow:#FFB81C;
+    --bs-nhs-yellow:#FAE100;
+  }
+  
+  /* 2. Utility helpers for every NHS colour                      */
+  @media (min-width:0){
+    /* Auto-generated to keep the file tiny */
+    /* prettier-ignore */
+    .bg-nhs-blue{background-color:var(--bs-nhs-blue)!important}.text-nhs-blue{color:var(--bs-nhs-blue)!important}.border-nhs-blue{border-color:var(--bs-nhs-blue)!important}
+    .bg-nhs-dark-blue{background-color:var(--bs-nhs-dark-blue)!important}.text-nhs-dark-blue{color:var(--bs-nhs-dark-blue)!important}.border-nhs-dark-blue{border-color:var(--bs-nhs-dark-blue)!important}
+    .bg-nhs-bright-blue{background-color:var(--bs-nhs-bright-blue)!important}.text-nhs-bright-blue{color:var(--bs-nhs-bright-blue)!important}.border-nhs-bright-blue{border-color:var(--bs-nhs-bright-blue)!important}
+    .bg-nhs-light-blue{background-color:var(--bs-nhs-light-blue)!important}.text-nhs-light-blue{color:var(--bs-nhs-light-blue)!important}.border-nhs-light-blue{border-color:var(--bs-nhs-light-blue)!important}
+    .bg-nhs-aqua-blue{background-color:var(--bs-nhs-aqua-blue)!important}.text-nhs-aqua-blue{color:var(--bs-nhs-aqua-blue)!important}.border-nhs-aqua-blue{border-color:var(--bs-nhs-aqua-blue)!important}
+  
+    .bg-nhs-black{background-color:var(--bs-nhs-black)!important}.text-nhs-black{color:var(--bs-nhs-black)!important}.border-nhs-black{border-color:var(--bs-nhs-black)!important}
+    .bg-nhs-dark-grey{background-color:var(--bs-nhs-dark-grey)!important}.text-nhs-dark-grey{color:var(--bs-nhs-dark-grey)!important}.border-nhs-dark-grey{border-color:var(--bs-nhs-dark-grey)!important}
+    .bg-nhs-mid-grey{background-color:var(--bs-nhs-mid-grey)!important}.text-nhs-mid-grey{color:var(--bs-nhs-mid-grey)!important}.border-nhs-mid-grey{border-color:var(--bs-nhs-mid-grey)!important}
+    .bg-nhs-pale-grey{background-color:var(--bs-nhs-pale-grey)!important}.text-nhs-pale-grey{color:var(--bs-nhs-pale-grey)!important}.border-nhs-pale-grey{border-color:var(--bs-nhs-pale-grey)!important}
+  
+    .bg-nhs-dark-green{background-color:var(--bs-nhs-dark-green)!important}.text-nhs-dark-green{color:var(--bs-nhs-dark-green)!important}.border-nhs-dark-green{border-color:var(--bs-nhs-dark-green)!important}
+    .bg-nhs-green{background-color:var(--bs-nhs-green)!important}.text-nhs-green{color:var(--bs-nhs-green)!important}.border-nhs-green{border-color:var(--bs-nhs-green)!important}
+    .bg-nhs-light-green{background-color:var(--bs-nhs-light-green)!important}.text-nhs-light-green{color:var(--bs-nhs-light-green)!important}.border-nhs-light-green{border-color:var(--bs-nhs-light-green)!important}
+    .bg-nhs-aqua-green{background-color:var(--bs-nhs-aqua-green)!important}.text-nhs-aqua-green{color:var(--bs-nhs-aqua-green)!important}.border-nhs-aqua-green{border-color:var(--bs-nhs-aqua-green)!important}
+  
+    .bg-nhs-purple{background-color:var(--bs-nhs-purple)!important}.text-nhs-purple{color:var(--bs-nhs-purple)!important}.border-nhs-purple{border-color:var(--bs-nhs-purple)!important}
+    .bg-nhs-dark-pink{background-color:var(--bs-nhs-dark-pink)!important}.text-nhs-dark-pink{color:var(--bs-nhs-dark-pink)!important}.border-nhs-dark-pink{border-color:var(--bs-nhs-dark-pink)!important}
+    .bg-nhs-pink{background-color:var(--bs-nhs-pink)!important}.text-nhs-pink{color:var(--bs-nhs-pink)!important}.border-nhs-pink{border-color:var(--bs-nhs-pink)!important}
+    .bg-nhs-dark-red{background-color:var(--bs-nhs-dark-red)!important}.text-nhs-dark-red{color:var(--bs-nhs-dark-red)!important}.border-nhs-dark-red{border-color:var(--bs-nhs-dark-red)!important}
+    .bg-nhs-orange{background-color:var(--bs-nhs-orange)!important}.text-nhs-orange{color:var(--bs-nhs-orange)!important}.border-nhs-orange{border-color:var(--bs-nhs-orange)!important}
+    .bg-nhs-warm-yellow{background-color:var(--bs-nhs-warm-yellow)!important}.text-nhs-warm-yellow{color:var(--bs-nhs-warm-yellow)!important}.border-nhs-warm-yellow{border-color:var(--bs-nhs-warm-yellow)!important}
+    .bg-nhs-yellow{background-color:var(--bs-nhs-yellow)!important}.text-nhs-yellow{color:var(--bs-nhs-yellow)!important}.border-nhs-yellow{border-color:var(--bs-nhs-yellow)!important}
+  }
+  
+  /* 3. Optional: tweak default component foregrounds for contrast */
+  .btn-primary,.badge.bg-primary{--bs-btn-color:#fff}
+  .btn-danger,.badge.bg-danger{--bs-btn-color:#fff}
+  .btn-dark,.badge.bg-dark{--bs-btn-color:#fff}
+  /* …add any special-case tweaks you spot in testing */
+
+  /* 4. Text contrast rules for NHS colored backgrounds */
+  .bg-nhs-blue,
+  .bg-nhs-dark-blue,
+  .bg-nhs-bright-blue,
+  .bg-nhs-light-blue,
+  .bg-nhs-aqua-blue,
+  .bg-nhs-black,
+  .bg-nhs-dark-grey,
+  .bg-nhs-mid-grey,
+  .bg-nhs-dark-green,
+  .bg-nhs-green,
+  .bg-nhs-light-green,
+  .bg-nhs-aqua-green,
+  .bg-nhs-purple,
+  .bg-nhs-dark-pink,
+  .bg-nhs-pink,
+  .bg-nhs-dark-red,
+  .bg-nhs-orange {
+    color: white !important;
+  }
+
+  .bg-nhs-warm-yellow,
+  .bg-nhs-yellow,
+  .bg-nhs-pale-grey {
+    color: var(--bs-nhs-black) !important; /* NHS Black for light backgrounds */
+  }
