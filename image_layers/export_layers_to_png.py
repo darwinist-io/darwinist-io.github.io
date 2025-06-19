@@ -5,6 +5,9 @@ import os
 from gi.repository import Gimp, Gio, GLib
 
 def export_layers_as_png(image_path, output_dir):
+    # Ensure output directory exists
+    os.makedirs(output_dir, exist_ok=True)
+    
     # Open the image
     file = Gio.File.new_for_path(image_path)
     image = Gimp.file_load(Gimp.RunMode.NONINTERACTIVE, file)
@@ -37,9 +40,13 @@ def export_layers_as_png(image_path, output_dir):
     image.delete()
 
 def run_batch():
-    image_path = 'logos_for_main_page.xcf'
-    output_dir = '../assets/images'
-    export_layers_as_png(image_path, output_dir)
+    # Process both XCF files
+    images_to_process = [
+        ('logos_for_main_page.xcf', '../assets/images/logos'),
+        ('letterboxes-460x175.xcf', '../assets/images/letterboxes')
+    ]
+    for image_path, output_dir in images_to_process:
+        export_layers_as_png(image_path, output_dir)
 
 if __name__ == '__main__':
     run_batch()

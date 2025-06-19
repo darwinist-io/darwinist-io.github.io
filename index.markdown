@@ -32,7 +32,47 @@ cards_widget:
     image: /assets/images/bootstrap-logo.png
 about_text: true
 about_title: "We are distributors and integrators of healthcare applications."
+
 about_items:
+  - title: "Clinical Information System"
+    image: "assets/images/letterboxes/clinical-information-system.png"
+    strapline: "A complete FHIR-native clinical data and workflow backbone"
+    cost: "£1 per patient per year"
+    features:
+      - "Built on FHIR UK Core from day one"
+      - "Event-driven: Medical records as immutable clinical logs"
+      - "Supports end-to-end patient record management, care pathways, and reporting"
+      - "Seamless data interoperability and sharing with other NHS systems"
+      - "Zero integration fees or consulting overhead"
+      - "QIP toolkit"
+
+  - title: "Radiology Module"
+    image: "assets/images/letterboxes/radiology.png"
+    strapline: "Replaces PACS, RIS, and VNA with a single open-standard system"
+    cost: "+£1 per patient per year"
+    features:
+      - "Runs on DicomWeb (including Azure DICOM or Orthanc)"
+      - "RIS functions built directly on FHIR"
+      - "Integrated AI marketplace for diagnostic assistance"
+      - "Supports multi-modality imaging and teleradiology"
+      - "High-performance image viewers and cloud-native workflow tools"
+    
+
+
+  - title: "Summary AI Module"
+    image: "assets/images/letterboxes/ai_summary.png"
+    strapline: "AI for longitudinal patient understanding and administrative efficiency"
+    cost: "+£1 per patient per year"
+    features:
+      - "Clinician-validated record summaries and care plans"
+      - "AI-generated discharge notes, referral letters, and patient letters"
+      - "Embedded NLP models tuned for UK clinical records"
+      - "Fully auditable AI with integrated decision support"
+      - "Medical device quality management system"
+
+
+
+about_items_old:
   - icon: "fas fa-cogs"
     title: "Technical Integration"
     text: "Darwinist offers a streamlined solution for implementing game changing healthcare software tools into clinical settings. We simplify the deployment and management of multiple concurrent applications, using our engineering expertise to provide seamless integration into existing IT systems."
