@@ -1,6 +1,6 @@
 ---
 layout: document
-title: "Draft - Understanding The Use of Clinical AI Across England’s NHS Trusts"
+title: "Understanding The Use of Clinical AI Across England’s NHS Trusts"
 subtitle: "Adoption, Governance, and Outcomes from a 2024 National FOI Survey"
 date: 2025-06-10
 author: "Darwinist Team"
@@ -12,13 +12,7 @@ toc: true
 excerpt: "A comprehensive analysis of clinical AI adoption across England’s NHS trusts, based on 120 FOI responses. Covers adoption rates, leading vendors, governance, barriers to scale, and future directions for AI in UK healthcare."
 ---
 
-# Draft / Preview
-
----
-
-# **Executive Summary** {#executive-summary}
-
----
+## **Executive Summary** {#executive-summary}
 
 This report examines the current state of adoption, procurement, and governance practices of clinical artificial intelligence in England’s NHS trusts as of late 2024, based on Freedom of Information (FOI) responses from 120 secondary care trusts.
 
@@ -26,25 +20,25 @@ There are broadly two types of AI in use clinically. Convolutional Neural Networ
 
 Radiology AI was by far the most prevalent type of AI reported, with only a handful of trusts reporting usage of Ambient AI, and no mention at all of Summary AI.
 
-The responses reveal a 50% adoption rate of clinical AI tools. 36 different AI providers were cited, with neuroradiology and stroke support AI vendor [Brainomix](https://www.brainomix.com/) seeing the greatest penetration. However, since we collected the data, some trusts have clarified their responses, and [Annalise](https://annalise.ai/) appears to have become the most widely adopted provider.
+The responses reveal a 50% adoption rate. 36 different AI providers were cited, with neuroradiology and stroke support AI vendor [Brainomix](https://www.brainomix.com/) seeing the greatest penetration. Since the data was collected, some trusts have clarified their responses, and [Annalise](https://annalise.ai/) appears to have become the most widely adopted provider.
 
-However, higher penetration does not equate to high usage. Adoption is mostly limited to small scale pilot projects, although higher usage rates are observed in fracture detection and mammography support tools. Even though tools like Brainomix have high penetration, the usage of their AI is relatively low.
+However, higher penetration does not equate to high usage, with adoption mostly limited to small scale pilot projects. Only around 1% of England’s medical images in 2024 were touched by AI tools. Higher usage volumes were observed in MSK support tools, and these represent a potential high growth use case, with AI’s ability to produce richer reporting being particularly important.  
 
 Procurement and governance practices were at an early stage, but clearly of importance to trusts keen to build decision making frameworks. Some trusts have established internal steering groups, while others relied on Integrated Care Boards (ICBs) or regional networks for decision-making.
 
----
-
-# **Response Results** {#response-results}
+It appears clear that AI will increasingly impact care over the coming years, but human oversight will remain essential. The role of radiologists will likely have to shift towards a more holistic understanding of the deployment of AI across healthcare settings.
 
 ---
 
-On the 18th September 2024, Darwinist sent out FOI requests to 149 NHS trusts. We asked them for details regarding any clinical AI tools that were currently being utilised in the trust. Additionally, we requested details on the usage frequency, and copies of any policies, procedures or committee notes regarding selection and implementation. 
+## **Response Results** {#response-results}
+
+On the 18th September 2024, Darwinist sent out FOI requests to 149 NHS trusts. Trusts were asked for details regarding any AI tools that were currently being used for diagnosis or treatment of patients within the trust. Additionally, details on the usage frequency, and copies of any policies, procedures or committee notes regarding selection and implementation were requested. 
 
 Trusts were chosen because of the presence of radiology capabilities, as this was Darwinist’s focus at the time. Ambulance and mental health trusts were not contacted. 120 trusts responded to the FOI request, and 29 either did not respond at all, or declined to respond citing the Section 31 (1) FOI exemption regarding cyber security concerns. 
 
-Perhaps as was to be expected given the independent nature of trusts, there was significant variation in adoption across the country. Responses were split exactly down the middle, with 60 trusts reporting AI use, and 60 trusts saying they were not. Each of the 12 community trusts that were contacted confirmed that they had not implemented any clinical AI. 
+Perhaps as was to be expected given the independent nature of trusts, there was significant variation in adoption across the country. Responses were split exactly down the middle, with 60 trusts reporting AI use, and 60 trusts saying they were not. Each of the 12 community trusts that were contacted confirmed that they had not implemented any form of clinical AI. 
 
-The responses present a clear picture of the main providers of clinical AI products to trusts and their levels of penetration. There were a total of 36 different vendors reported, with the vast majority being Radiology AI solutions for diagnostic imaging. In general, usage numbers for the applications were relatively low, even for those with greater numbers of installations. 
+The responses present a clear picture of the main providers of radiology AI products to trusts and their levels of penetration. There were a total of 36 different vendors reported, with the vast majority being Radiology AI solutions for diagnostic imaging. In general, usage numbers for the applications were relatively low, even for those with greater numbers of installations. 
 
 * Stroke Detection \- [Brainomix](https://www.brainomix.com/) (16 trusts) and [RapidAI](https://www.rapidai.com/) (12 trusts) are widely used for acute stroke diagnosis and care.
 
@@ -62,17 +56,23 @@ The responses present a clear picture of the main providers of clinical AI produ
 
 * Image Reconstruction \- Scanner-specific tools such as [Siemens Deep Resolve](https://www.siemens-healthineers.com/en-uk/magnetic-resonance-imaging/technologies-and-innovations/deep-resolve) (3 trusts) and [Canon AICE](https://uk.medical.canon/aice/) (1 trust) are being used to reconstruct MRI images and check scan quality. 
 
-Additionally there was some sporadic reporting of Ambient AI tools, such as Nuance Speechmagic for medical transcription, and the creation of patient information videos via Synesthesia. However, it is possible that Ambient AI usage was underreported by trusts, as they may have felt they fell outside the scope of clinical AI as defined in our request.
+Neurology, and especially stroke, provides a strong use case for radiology AI. Because of the critical time savings they provide, stroke AI tools present the largest impact on patient outcomes. As of late 2024, it appears that all [107 stroke units](https://www.digitalhealth.net/2024/12/all-107-stroke-centres-in-england-using-ai-technology-says-nhse/) across England had implemented AI. Despite this widespread adoption though, stroke imaging only accounts for around 0.2% of the total annual medical images taken across the NHS.
 
-It is likely that the majority of these responses came from the radiology team, so tools being used in cardiology and pathology, for example, may be under-reported.
+In contrast, musculoskeletal (MSK) imaging constitutes a significantly larger share of annual scans, and vendors like Gleamer and Radiobotics saw some of the highest usage volumes reported by trusts. However, these volumes only represented a tiny fraction of the NHS’s total MSK scans, presenting a key potential high growth area. 
+
+Mammography is also a discipline where radiology AI shows great potential. Vendors such as [Lunit](https://www.lunit.io/en) and [Kheiron Medical Technologies](https://www.kheironmed.com/) were reported by trusts, and in February 2025, the NHS [announced plans](https://www.theguardian.com/society/2025/feb/04/nhs-to-launch-worlds-biggest-trial-of-ai-breast-cancer-diagnosis) for the world’s largest AI breast cancer diagnosis trials.
+
+Additionally there was some sporadic reporting of Ambient AI tools, such as [Nuance Speechmagic](https://www.nuance.com/en-gb/index.html) for medical transcription, and the creation of patient information videos via [Synthesia](https://www.synthesia.io/). It is possible that Ambient AI usage was underreported by trusts, as they may have felt they fell outside the scope of clinical AI as defined in our request.
+
+It is worth noting that the majority of these responses likely came from the radiology team, so tools being used in cardiology and pathology, for example, may be under-reported. Annalise, BoneXpert and Brainomix responded to this study noting significant under-reporting of their products, but Darwinist was unable to validate the exact extent of their deployment in the NHS.
+
+Some AI vendors reported additional contracts signed outside of the scope of the study. Given the speed of deploying new radiology AI into trusts is slow, Darwinist believes that, despite this, there has been no significant changes in how radiology AI tools are impacting care since the study was conducted. 
 
 ---
 
-# **Governance and Guidance** {#governance-and-guidance}
+## **Governance and Guidance** {#governance-and-guidance}
 
----
-
-Some trusts did not have any clinical AI policies, guidelines and frameworks in place, but a significant portion of responders said they were in the process of drafting them. A small number of trusts indicate that they have AI steering groups or AI governance boards set up.
+Some trusts did not have any AI policies, guidelines and frameworks in place, but a significant portion of responders said they were in the process of drafting them. A small number of trusts indicate that they have AI steering groups or AI governance boards set up.
 
 A number of responses note that pilot trials are underway and implemented in trusts through region wide initiatives orchestrated by integrated care boards (ICBs) or imaging networks.
 
@@ -80,23 +80,15 @@ AI approval processes often overlap with general digital governance committees a
 
 ---
 
-# **Adoption at Scale** {#adoption-at-scale}
+## **What's Stopping Adoption - Radiology AI** {#adoption-at-scale}
 
----
-
-Although approximately half of the responding trusts reported use in some capacity, the data shows that Brainomix, the most frequently mentioned provider, had only a 13% adoption rate, and very low usage. From the usage statistics provided, we can estimate that only around 1% of medical images produced in England are being put through AI.
-
-We spoke to a number of NHS staff, clinical AI vendors, Health Innovation Networks and representatives of industry bodies such as the ABHI to try to uncover the factors which appear to be blocking adoption at scale.
-
-## **Radiology AI** {#radiology-ai}
-
----
+From the overall usage statistics provided, it can be estimated that AI tools are only used on around 1% of medical images produced in England. Darwinist spoke to a number of NHS staff, AI vendors, Health Innovation Networks and representatives of industry bodies such as the ABHI to try to uncover the factors which appear to be blocking adoption at scale.
 
 ### **Business Cases** {#business-cases}
 
 Radiology AIs are packages of single task computer vision tools, which cannot be used for diagnosis without the oversight of a radiologist. They are certified medical devices, and can only operate within the confines of that regulatory framework. Each radiology AI tool comes with a set of technical integration requirements that the IT department has to manage, both in the initial installation and across the entire product lifecycle.
 
-Some filter out scans with no significant findings, prioritising patients, but all scans still require signoff by a human radiologist. Our data suggests that, depending on volume, radiology AI products generally cost between £10 and £30 per scan, however they do not significantly reduce reporting time for each scan. As the hospital is already paying the radiologist, it appears that at their current price point, radiology AI does not necessarily represent good value for money for NHS trusts. 
+Some filter out scans with no significant findings, prioritising patients, but all scans still require signoff by a human radiologist. Our data suggests that, depending on volume, radiology AI products can cost up to £30 per scan, however they often do not significantly reduce reporting time. As the hospital is already paying the radiologist, it appears that at their current price point and under current regulations, radiology AI does not necessarily represent good value for money for NHS trusts.
 
 ### **Sustainability** {#sustainability}
 
@@ -104,25 +96,30 @@ There are also serious concerns regarding vendor longevity. The majority of radi
 
 ### **Reporting** {#reporting}
 
-Radiology AI does have the potential to deliver much more comprehensive and accessible radiology reporting quality. AI can generate much clearer, richer outputs, making them easier for consulting clinicians to interpret and act on. Radiologists report on a specific query, and do not review every frame of every image. Radiology AI tools have a significant advantage over their human counterparts in this way, as they can assess every pixel and easily highlight areas of interest a human may have missed. 
+Radiology AI does have the potential to deliver much more comprehensive and accessible radiology reporting quality. Current radiology reporting standards often provide short, text based results, but AI can generate much richer and more visually comprehensive outputs, making them easier for patients and consulting clinicians to interpret and act on. This is especially powerful in MSK, where a more thorough report has the potential to improve the level of care across both NHS and private treatment. 
 
-However, radiology AI’s analytical vigilance may lead to rise in incidentalomas, unexpected findings of uncertain clinical significance. Like full body scanning, this can pose complex ethical challenges and may ultimately prove detrimental to the delivery of care. Whilst early detection could be potentially life saving, additional findings are often benign, and their over-reporting could lead to unnecessary investigations, distressing patients and wasting valuable hospital resources.
+Radiologists report on a specific query, and do not review every frame of every image. Radiology AI tools have a significant advantage over their human counterparts in this way, as they can assess every pixel and easily highlight areas of interest a human may have missed. 
+
+Radiology AI’s analytical vigilance may though lead to a rise in incidentalomas, unexpected findings of uncertain clinical significance. Like full body scanning, this can pose complex ethical challenges and may ultimately prove detrimental to the delivery of care. Whilst early detection could be potentially life saving, additional findings are often benign, and their over-reporting could lead to unnecessary investigations, distressing patients and wasting valuable hospital resources.
 
 ### **Resistance to Change** {#resistance-to-change}
 
-There is understandable reticence amongst some radiologists to adopt tools which are perceived to be a threat to their relevance. Whilst in the short to medium term, radiology AI tools simply augment a clinician’s existing workflows, there is potential for a future in which AI diagnoses patients without human supervision, creating an existential threat to the practice.
+Institutional inertia, decision paralysis and clinical resistance may be proving to be bottlenecks for adoption. There is understandable reticence amongst some radiologists to adopt tools which are perceived to be a threat to their relevance. Whilst in the short to medium term, radiology AI tools simply augment a clinician’s existing workflows, there is potential for a future in which AI diagnoses patients without human supervision, creating an existential threat to the practice.
 
-It may actually be the case, however, that radiologists are prime candidates to become the experts in clinical AI. Radiologists are capable physicists and mathematicians, meaning they are the best placed of any medical discipline to understand the probabilistic risk profiles and other mathematical concepts that need to be addressed in the application of radiology and summary AI tools.
+However, radiology, as a practice, may be best placed to control all forms of AI in clinical environments. Radiologists are capable physicists and mathematicians, meaning they are the best placed of any medical discipline to understand the probabilistic risk profiles and other mathematical concepts that need to be addressed in the application of radiology and summary AI tools.
 
-## **Summary AI** {#summary-ai}
+It is also worth noting that some of the perceived resistance is down to a lack of resources. There is a disparity in digital maturity levels across trusts, and some simply do not have the requisite IT staff numbers and experience to be able to dedicate time to implementing new AI tools.
 
 ---
+
+## **What's Stopping Adoption - Summary AI** {#summary-ai}
+
 
 ### **Access to Data** {#access-to-data}
 
 Compared to radiology AI tools, which have limited scope, summary AI solutions have the potential to touch every branch of medicine, and there is already [evidence](https://hai.stanford.edu/news/ai-can-outperform-humans-writing-medical-summaries) showing clinicians prefer summaries generated by AI tools. There are a wide range of different use cases for summary AI including point of care, discharge notes, letters to GPs and patients, forensic reporting, care plan generation and quality assurance assessments.
 
-However, whilst radiology AIs have relatively simple DICOM in/DICOM out workflows, summary AIs are an order of magnitude harder to implement. They require integrations with a wide range of disparate and usually antiquated clinical information systems.
+Whilst radiology AIs have relatively simple DICOM in/DICOM out workflows, summary AIs are an order of magnitude harder to implement. They require integrations with a wide range of disparate and usually antiquated clinical information systems.
 
 The quality of clinical record keeping in the UK is generally very strong, especially when compared to health systems around the globe. However, NHS trusts currently have to use a number of different proprietary clinical information systems to store this data. The vendors of these systems often have opaque access methods, and exert a level of control over the data which makes it difficult for trusts to innovate.
 
@@ -132,64 +129,71 @@ Currently available LLM models already have the capability to generate good qual
 
 Much like radiology AI tools, summary AI tools still require a trained clinician to make the final call on its results. The ultimate responsibility must still reside with the clinicians.
 
-## **Ambient AI** {#ambient-ai}
+---
+
+## **What's Stopping Adoption - Ambient AI** {#ambient-ai}
+
+While ambient AI solutions, such as voice-driven transcription and documentation assistants, are present in the wider clinical landscape, there was very little usage of them reported by the trusts in our sample. As such, Darwinist does not currently have sufficient evidence to comment meaningfully on their implementation. 
+
+Whilst further investigation would be required before drawing conclusions about the role they play at NHS trusts, it does appear that pinning a microphone to a patient somewhat changes the environment under which care is delivered. Beyond the practicalities of setting up recording equipment in clinical scenarios, ambient AI’s presence could have a detrimental impact on a patient’s levels of honesty and anxiety, especially in sensitive or embarrassing cases. 
+
+The BMA has also [raised concerns](https://www.digitalhealth.net/2025/06/bma-warns-gps-on-the-substantial-risks-of-ai-scribing-tools/) that ambient AI tools are being adopted into clinical workflows without the necessary clinical safety and data protection checks being in place. 
 
 ---
 
-While ambient AI solutions, such as voice-driven transcription and documentation assistants, are present in the wider clinical landscape, there was very little usage of them reported by the trusts in our sample. As such, we do not currently have sufficient evidence to comment meaningfully on their implementation. 
+## **The Future of Clinical AI** {#the-future-of-clinical-ai}
 
-Whilst further investigation would be required before drawing conclusions about the role they play at NHS trusts, it does appear that pinning a microphone to a patient somewhat changes the environment under which care is delivered. Beyond the practicalities of setting up recording equipment in clinical scenarios, ambient AI’s presence could have a detrimental impact on a patient’s levels of honesty and anxiety, especially in sensitive or embarrassing cases.
+Radiology AI has presented humanity with an excellent new tool in its diagnostic arsenal, but its development and delivery sits mostly in the hands of VC backed firms whose commercial necessities mean that it may not be able to reach a price point that makes it feasible for mass adoption. 
 
----
+Some radiology AI vendors have argued that implementation costs are trending slowly downwards, but the realities of meeting regulatory requirements may be the true obstacle in achieving such a price point. Regardless of commercial motivations, radiology AI tools will generally need to reach £1 to enable ubiquity.
 
-# **The Future of Clinical AI** {#the-future-of-clinical-ai}
+Whilst there will undoubtedly be high intensity pathways where vendors are essential, it may be the case that development of radiology AI tools must transition into the hands of healthcare providers. Hospitals are sitting on vast quantities of imaging data, and given the right platform, could begin training their own CNN models on their own patient data.
 
----
+If a self-trained clinical AI tool is being used exclusively within the healthcare provider that built it, medical device clearances can be avoided, removing a key resource drain from the process. There is even scope for the sharing of AI models between trusts. Imaging networks and integrated care boards could assume the responsibilities needed to coordinate the sharing of data and quality management systems required for the creation of AI tools by NHS trusts.
 
-Radiology AI has presented humanity with an excellent new tool in its diagnostic arsenal, but its development and delivery currently belongs to VC backed firms whose commercial necessities mean that it may not be able to reach a price point that makes it feasible for mass adoption.
+Similarly, Darwinist can see trusts leveraging the contents of their clinical information systems to fine-tune their own LLM models. By ingesting their entire catalogue of clinical guidelines, alongside medical records they can create highly localised AI which allow a much deeper analysis of trust operations and patient cohorts. However, to fully realise this scenario, there needs to be a shift away from the proprietary and antiquated clinical information systems currently in place at most trusts. 
 
-It may be the case that control of radiology AI tools must transition into the hands of healthcare providers. Whilst there will undoubtedly still be some cases where vendors are needed, hospitals are sitting on vast quantities of imaging data, and given the right platform, could begin training their own CNN models.
+The NHS is keen to push towards the open data sharing standard [FHIR](https://digital.nhs.uk/services/fhir-apis). Services such as [Microsoft’s Azure FHIR Store](https://learn.microsoft.com/en-us/azure/healthcare-apis/fhir/overview) and open source alternative [HAPI FHIR](https://hapifhir.io/) provide the functionalities and performance for clinical data storage which can allow trusts to fine tune AI models.
 
-If regulatory clarification can be achieved, there is even scope for the sharing of AI models between trusts. Imaging networks and integrated care boards could assume the regulatory responsibilities needed to coordinate the sharing of data and creation of AI tools amongst member trusts.
-
-Similarly, we can see trusts leveraging the contents of their clinical information systems to fine-tune their own LLM models. By ingesting their entire catalogue of clinical guidelines, alongside medical records they can create highly localised AI which allow a much deeper analysis of trust operations and patient cohorts. However, to fully realise this scenario, there needs to be a shift away from the proprietary and antiquated clinical information systems currently in place at most trusts.
-
-We believe that summary AI tools present the most compelling use of clinical AI. At the point of care, clinicians could have clear, concise information about the presenting patient, allowing them to make quicker, more informed decisions. The potential for summary AIs to standardise discharge notes, letters to patients, and communications with other organisations is immense.
+Darwinist believes that summary AI tools present the most compelling use of AI in healthcare. At the point of care, clinicians could have clear, concise information about the presenting patient, allowing them to make quicker, more informed decisions. The potential for summary AIs to standardise discharge notes, letters to patients, and communications with other organisations is immense.
 
 Darwinist believes that the clinical use of summary AIs should follow a similar pattern to radiology AI, with oversight from a trained clinician being essential. The reporting physician will order a report from a summary AI in much the same way as they would order a medical image.  
 A specially trained clinical professional then validates that the quality of the data is suitable for safe and accurate use in generating a report.
 
-We believe that new job roles will be created in order to facilitate the clinical assessment of content for summary generation. To support clinicians in their journey to becoming experts in clinical AI practice, Continual Personal Development certifications will need to be designed and delivered in collaboration with leading universities and the Royal Colleges of Medicine.
+New clinical roles will likely have to be created in order to facilitate the clinical assessment of content for summary generation. To support clinicians in their journey to becoming experts in the deployment and use of AI in medical practice, Continual Personal Development programmes will need to be designed and delivered in collaboration with leading universities and the Royal Colleges of Medicine.
+
+Darwinist also believes that Quality Improvement Projects (QIPs) are a highly important process in the development and deployment of AI. If junior doctors are given the correct tools and training in how to safely deploy AI, QIPs can create an iterative, evidence based route to adoption. 
 
 ---
 
-# **Conclusion** {#conclusion}
+## **Conclusion** {#conclusion}
+
+In recent years, AI has been held up by the tech community as an unstoppable force which will dramatically change the delivery of care. In reality, AI is not a silver bullet. To have this heralded transformational effect on healthcare, standards and practices of medicine may have to be torn up, and the responsibility of clinicians reduced.
+
+Despite this, the responses in this study shows that the use of AI in clinical environments, and in particular radiology AI, is rising across England’s NHS trusts. It is clear though, that both the field of medicine, and society as a whole, is still very early in the AI journey. 
+
+Society must be careful not to place unrealistic expectations on new AI technologies. It would be a fallacy to suggest that AI adoption should be blocked because it cannot achieve perfection. It is much more reasonable to measure the performance of AI in clinical settings against current clinician error rates, rather than insisting that it be held to an impossible standard.
+
+The NHS today is facing a 30% shortfall of radiologists, which is compounding a potential [six week](https://www.rcr.ac.uk/news-policy/policy-reports-initiatives/state-of-the-wait/) waiting time for radiology reporting. Many of today’s radiology AI solutions are already mature enough to show significant efficiency gains and improvements in the quality of care.
+
+But as radiology AI tools begin to handle more and more of the heavy lifting, will the position of radiologists in the diagnostic chain need to change? Is there a future in which AI renders radiologists redundant? It may be the case that radiologists need to shift from a focus on imaging to a broader engagement with a range of AI workflows.
+
+Darwinist believes the only safe, clinically reliable way for AI to be adopted is by maintaining human supervision. This clinician-in-the-loop principle does pose a unique challenge for the business case of radiology AI tools though. If the route to mass adoption relies on utilising existing human resources, can radiology AI provide enough additional value to justify its use? 
+
+There is a common maxim that argues that for a new product to displace an existing solution, it must be ten times better than what it seeks to replace. Perhaps, apart from time critical niche use cases such as stroke, radiology AI does not currently provide a radical enough improvement to the status quo to justify the technical, political and financial switching costs.
+
+Maybe the true value of radiology AI sits outside of diagnosis. Perhaps the radiology workflow continues as it is, with radiologists still in place. AI could expand out their reports to offer much richer, more easily digestible information, understood by a broader spectrum of people involved in diagnosis and recovery. 
+
+The future of clinical AI application development and deployment may well need to be in the hands of Trusts, rather than commercial entities. By bringing AI training and inference in-house, trusts, imaging networks and ICBs could leverage their existing data and guidelines to create clinically potent, cost effective AI tools. 
 
 ---
 
-The responses in this study shows that the use of clinical AI, and in particular radiology AI, is rising across England’s NHS trusts. It is clear though, that as a society we are still very early in the AI journey. 
-
-In recent years, AI has been held up by the tech community as an unstoppable force which will dramatically change the delivery of care. In reality, AI is not a silver bullet. To have the promised transformational effect on healthcare, standards and practices of medicine would have to be torn up, and the role of clinicians severely reduced.
-
-Clinical AI tools are already mature enough to provide significant efficiency gains and improve the quality of care. However, the only safe, clinically reliable way for it to do so is by relying on human intervention.  
-
-Whilst this human-in-the-loop methodology is of clear benefit for summary AIs, it poses a unique challenge for radiology AI tools. If the route to mass adoption relies on utilising existing human resources, how can radiology AI provide enough additional value to justify its use?
-
-There is a common maxim that argues that for a new product to displace an existing solution, it must be ten times better than what it seeks to replace. Perhaps clinical AI does not currently provide a radical enough improvement to the status quo to justify the technical, political and financial switching costs. 
-
-The future of clinical AI application development and deployment may well need to be in the hands of healthcare professionals, rather than commercial entities. By bringing AI training and inference in-house, trusts, imaging networks and ICBs can leverage their existing data and guidelines to create clinically potent, cost effective clinical AI tools. 
-
-However, we must also be careful not to place an unrealistic expectation on new AI technologies. It would be a fallacy to suggest that AI adoption should be blocked because it cannot achieve perfection. It is much more reasonable to measure the performance of a clinical AI tool against current clinician error rates, rather than insisting that it be held to an impossible standard.
-
----
-
-# **Response Breakdown by Trust** {#response-breakdown-by-trust}
-
----
+## **Response Breakdown by Trust** {#response-breakdown-by-trust}
 
 Below is a list of the responses provided by the NHS Trusts. The level of detail provided reflects that of the trust’s response.  
 
-## **Trusts Confirming The Use of Clinical AI** {#trusts-confirming-the-use-of-clinical-ai}
+
+## **Trusts Stating The Use of Clinical AI** {#trusts-stating-the-use-of-clinical-ai}
 
 * **Barking, Havering and Redbridge University Hospitals NHS Trust**  
   Uses Aidoc AI (Radiology), Brainomix (Stroke CT), Combinostics cNeuro (Brain MRI).
@@ -218,9 +222,9 @@ Below is a list of the responses provided by the NHS Trusts. The level of detail
 * **East Sussex Healthcare NHS Trust**  
   Uses Brainomix to process all patients referred by stroke team (887 in 23/24), HeartFlow (used 57 times in 23/24).
 
-
 * **Epsom and St Helier University Hospitals NHS Trust**  
   Uses Annalise for chest x-ray and iSchemaView Rapid AI for brain CT scans. Annalise is being used on a trial basis, but has been used on 68,000 scans in the past year. Rapid AI was procured by Surrey Stroke Network.  
+
 * **Frimley Health NHS Foundation Trust**  
   Uses Annalise AI and Ufonia.
 
@@ -288,7 +292,8 @@ Below is a list of the responses provided by the NHS Trusts. The level of detail
   Uses Brainomix.
 
 * **North West Anglia NHS Foundation Trust**  
-  Confirmed that they are using clinical AI, but refused to list providers, invoking a Section 31 FOI exemption.    
+  Confirmed that they are using clinical AI, but refused to list providers, invoking a Section 31 FOI exemption. 
+
 * **Northern Care Alliance NHS Foundation Trust**  
   Uses iSchemaView RapidAI for category 1 stroke detection and Motilent (in selected sites); implementing Annalise. RapidAI saw 1763 uses in the previous year.
 
@@ -339,11 +344,13 @@ Below is a list of the responses provided by the NHS Trusts. The level of detail
 
 * **University Hospitals Dorset NHS Foundation Trust**  
   Uses iSchemaView RapidAI in the stroke department, Heartflow in cardiology, Skin Analytics in dermatology, and Aidence Targeted Lung Health Check.  
+
 * **University Hospitals of Morecambe Bay NHS Foundation Trust**  
   Uses BoneXpert for bone age assessments, Annalise for chest X-ray, Brainomix for CT based stroke decision support.
 
 * **University Hospitals Of Leicester NHS Trust**  
-  Confirmed that they are using clinical AI, but refused to list providers, invoking a Section 31 FOI exemption.    
+  Confirmed that they are using clinical AI, but refused to list providers, invoking a Section 31 FOI exemption.
+
 * **University Hospitals Sussex NHS Foundation Trust**  
   Uses Brainomix, Kheiron MIA, HeartFlow, and also indicated an AI enhanced patch for arrhythmias.
 
@@ -351,7 +358,8 @@ Below is a list of the responses provided by the NHS Trusts. The level of detail
   Uses HeartFlow.
 
 * **West Suffolk NHS Foundation Trust**  
-  Uses Skin Analytics on a daily basis.  
+  Uses Skin Analytics on a daily basis.
+
 * **Whittington Health NHS Trust**  
   Uses Gleamer BoneView.
 
@@ -364,16 +372,15 @@ Below is a list of the responses provided by the NHS Trusts. The level of detail
 * **Wye Valley NHS Trust**  
   Uses AI in stroke thrombectomy triage in partnership with University Hospitals Birmingham NHS Foundation Trust.
 
-
 * **York and Scarborough Teaching Hospitals NHS Foundation Trust**  
   Uses iSchemaView RapidAI for CT stroke perfusion imaging, and is trialling Kheiron MIA for mammography.
 
 ---
 
-## **Trusts Confirming They Do Not Use Clinical AI** {#trusts-confirming-they-do-not-use-clinical-ai}
+## **Trusts Stating They Do Not Use Clinical AI** {#trusts-stating-they-do-not-use-clinical-ai}
 
 * **Airedale NHS Foundation Trust**  
-* **Alder Hey Children’s NHS Foundation Trust**  
+* **Alder Hey Children’s NHS Foundation Trust** (BoneXpert stated they are a customer)  
 * **Barnsley Hospital NHS Foundation Trust**  
 * **Bedfordshire Hospitals NHS Foundation Trust**  
 * **Birmingham Community NHS Foundation Trust**  
@@ -409,7 +416,7 @@ Below is a list of the responses provided by the NHS Trusts. The level of detail
 * **Queen Victoria Hospital NHS Foundation Trust**  
 * **Royal Berkshire NHS Foundation Trust**  
 * **Royal Free London NHS Foundation Trust**  
-* **Royal National Orthopaedic Hospital NHS Trust**  
+* **Royal National Orthopaedic Hospital NHS Trust** (BoneXpert stated they are a customer)  
 * **Royal Wolverhampton NHS Trust** (developing a policy, no AI in use yet)  
 * **Sherwood Forest Hospitals NHS Foundation Trust**  
 * **Shrewsbury & Telford Hospital NHS Trust**  
@@ -467,6 +474,8 @@ Below is a list of the responses provided by the NHS Trusts. The level of detail
 * **University Hospitals of North Midlands NHS Trust**  
 * **University Hospital Southampton NHS Foundation Trust**
 
+---
+
 ## **Additional Responses** {#additional-responses}
 
 On May 9th, 2025, we sent a copy of our compiled report to all of the trusts initially contacted, offering them the chance to correct or comment. The following trusts provided additional information.
@@ -491,9 +500,7 @@ On May 9th, 2025, we sent a copy of our compiled report to all of the trusts ini
 
 ---
 
-# **Appendix** {#appendix}
-
----
+## **Appendix** {#appendix}
 
 ## **The FOI Request** {#the-foi-request}
 
@@ -520,6 +527,5 @@ The integration of AI technologies into healthcare is rapidly advancing and has 
 **Decision Making for Clinical AI**
 
 **Question 4:** If available, please provide copies of any policies, procedures, or committee meeting minutes from the past two years that outline how the trust selects and approves clinical AI systems for use.
-
 
 
