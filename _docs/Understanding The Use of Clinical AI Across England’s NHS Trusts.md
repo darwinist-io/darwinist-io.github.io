@@ -193,7 +193,7 @@ The future of clinical AI application development and deployment may well need t
 Below is a list of the responses provided by the NHS Trusts. The level of detail provided reflects that of the trust’s response.  
 
 
-## **Trusts Stating The Use of Clinical AI** {#trusts-stating-the-use-of-clinical-ai}
+### **Trusts Stating The Use of Clinical AI** {#trusts-stating-the-use-of-clinical-ai}
 
 * **Barking, Havering and Redbridge University Hospitals NHS Trust**  
   Uses Aidoc AI (Radiology), Brainomix (Stroke CT), Combinostics cNeuro (Brain MRI).
@@ -377,7 +377,7 @@ Below is a list of the responses provided by the NHS Trusts. The level of detail
 
 ---
 
-## **Trusts Stating They Do Not Use Clinical AI** {#trusts-stating-they-do-not-use-clinical-ai}
+### **Trusts Stating They Do Not Use Clinical AI** {#trusts-stating-they-do-not-use-clinical-ai}
 
 * **Airedale NHS Foundation Trust**  
 * **Alder Hey Children’s NHS Foundation Trust** (BoneXpert stated they are a customer)  
@@ -442,7 +442,7 @@ Below is a list of the responses provided by the NHS Trusts. The level of detail
 
 ---
 
-## **Non-Responsive Trusts** {#non-responsive-trusts}
+### **Non-Responsive Trusts** {#non-responsive-trusts}
 
 * **Ashford and St Peter's Hospitals NHS Foundation Trust**  
 * **Barts Health NHS Trust**  
