@@ -1,15 +1,15 @@
 ---
 layout: document
 title: "Understanding The Use of Clinical AI Across England’s NHS Trusts"
-subtitle: "Adoption, Governance, and Outcomes from a 2024 National FOI Survey"
+subtitle: "A comprehensive analysis of clinical AI adoption across England’s NHS trusts, based on 120 FOI responses. Discusses adoption rates, leading vendors, governance, barriers to scale, and future directions for AI in UK healthcare."
 date: 2025-06-10
 author: "Darwinist Team"
 tags: ["Clinical AI", "NHS", "Radiology AI", "Healthcare Technology", "FOI", "UK Health", "AI Adoption"]
 category: "Medical AI Solutions"
 featured: true
-hidden: true
+hidden: false
 toc: true
-excerpt: "A comprehensive analysis of clinical AI adoption across England’s NHS trusts, based on 120 FOI responses. Covers adoption rates, leading vendors, governance, barriers to scale, and future directions for AI in UK healthcare."
+excerpt: "A comprehensive analysis of clinical AI adoption across England’s NHS trusts, based on 120 FOI responses. Discusses adoption rates, leading vendors, governance, barriers to scale, and future directions for AI in UK healthcare."
 ---
 
 ## **Executive Summary** {#executive-summary}
