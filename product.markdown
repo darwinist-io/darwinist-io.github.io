@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: product
 title: Product
 hero_image: /assets/surgery-kit.jpg
 description: "NoCode platform for healthcare providers to create, deploy, manage AI applications and medical devices in a safe, regulated and secure way."

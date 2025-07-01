@@ -1,0 +1,201 @@
+---
+layout: default
+title: Usability-Driven Product
+description: "Darwinist combines usability engineering and WCAG-ready design to deliver safe, accessible, and clinician-friendly software for healthcare providers."
+---
+
+{% assign usability_data = site.pages | where: "name", "usability.markdown" | first %}
+
+<div class="container-fluid">
+  <!-- Hero Section -->
+  <div class="hero-section bg-primary text-white py-5 mb-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h1 class="display-4 fw-bold">{{ usability_data.hero_title }}</h1>
+          <p class="lead">{{ usability_data.hero_subtitle }}</p>
+          <blockquote class="blockquote">
+            <p class="mb-2">{{ usability_data.hero_tagline }}</p>
+          </blockquote>
+          <p class="text-light">{{ usability_data.hero_subtext }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standards Section -->
+  <div class="container mb-5">
+    <h2 class="h1 mb-4">Standards & Compliance</h2>
+    <div class="row">
+      {% for standard in usability_data.client_brief.standards %}
+      <div class="col-md-6 mb-4">
+        <div class="card h-100 border-{{ standard.bootstrap_colour }}">
+          <div class="card-header bg-{{ standard.bootstrap_colour }} text-white">
+            <h3 class="card-title mb-0">
+              <i class="{{ standard.fa_icon }} me-2"></i>
+              {{ standard.name }}
+            </h3>
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{ standard.description }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Palette Semantics -->
+  <div class="container mb-5">
+    <h2 class="h1 mb-4">Color Semantics in Healthcare UI</h2>
+    <div class="row">
+      {% for palette in usability_data.client_brief.palette_semantics %}
+      <div class="col-lg-6 mb-3">
+        <div class="card border-{{ palette[1].bootstrap_colour }}">
+          <div class="card-body">
+            <h5 class="card-title text-{{ palette[1].bootstrap_colour }}">
+              <i class="{{ palette[1].fa_icon }} me-2"></i>
+              {{ palette[0] | capitalize | replace: "_", " " }}
+            </h5>
+            <p class="card-text">{{ palette[1].description }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- IEC 62366 Support -->
+  <div class="container mb-5">
+    <h2 class="h1 mb-4">IEC 62366-1 Process Support</h2>
+    <div class="row">
+      {% for item in usability_data.client_brief.rationale.iec62366_alignment %}
+      <div class="col-lg-6 mb-4">
+        <div class="card h-100 border-{{ item.bootstrap_colour }}">
+          <div class="card-header bg-{{ item.bootstrap_colour }} text-white">
+            <h5 class="card-title mb-0">
+              <i class="{{ item.fa_icon }} me-2"></i>
+              {{ item.number }} - {{ item.name }}
+            </h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{ item.response }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Usability Benefits -->
+  <div class="container mb-5">
+    <h2 class="h1 mb-4">Usability Benefits</h2>
+    <div class="row">
+      {% for benefit in usability_data.client_brief.usability_benefits %}
+      <div class="col-md-6 mb-3">
+        <div class="card border-{{ benefit.bootstrap_colour }}">
+          <div class="card-body">
+            <div class="d-flex align-items-start">
+              <i class="{{ benefit.fa_icon }} text-{{ benefit.bootstrap_colour }} me-3 fs-3"></i>
+              <p class="card-text">{{ benefit.text }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Clinician Wellbeing -->
+  <div class="container mb-5">
+    <div class="card border-{{ usability_data.client_brief.clinician_wellbeing.bootstrap_colour }}">
+      <div class="card-header bg-{{ usability_data.client_brief.clinician_wellbeing.bootstrap_colour }} text-white">
+        <h2 class="card-title mb-0">
+          <i class="{{ usability_data.client_brief.clinician_wellbeing.fa_icon }} me-2"></i>
+          Clinician Wellbeing
+        </h2>
+      </div>
+      <div class="card-body">
+        <p class="card-text"><strong>Evidence:</strong> {{ usability_data.client_brief.clinician_wellbeing.evidence }}</p>
+        <p class="card-text"><strong>Takeaway:</strong> {{ usability_data.client_brief.clinician_wellbeing.takeaway }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cost of Poor Usability -->
+  <div class="container mb-5">
+    <div class="card border-{{ usability_data.client_brief.cost_of_getting_usability_wrong.bootstrap_colour }}">
+      <div class="card-header bg-{{ usability_data.client_brief.cost_of_getting_usability_wrong.bootstrap_colour }} text-white">
+        <h2 class="card-title mb-0">
+          <i class="{{ usability_data.client_brief.cost_of_getting_usability_wrong.fa_icon }} me-2"></i>
+          {{ usability_data.client_brief.cost_of_getting_usability_wrong.headline }}
+        </h2>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled">
+          {% for consequence in usability_data.client_brief.cost_of_getting_usability_wrong.consequences %}
+          <li class="mb-2"><i class="fas fa-exclamation-triangle text-danger me-2"></i>{{ consequence }}</li>
+          {% endfor %}
+        </ul>
+        
+        <div class="mt-4">
+          <h5 class="text-{{ usability_data.client_brief.cost_of_getting_usability_wrong.case_study.bootstrap_colour }}">
+            <i class="{{ usability_data.client_brief.cost_of_getting_usability_wrong.case_study.fa_icon }} me-2"></i>
+            Case Study: {{ usability_data.client_brief.cost_of_getting_usability_wrong.case_study.name }}
+          </h5>
+          <p>{{ usability_data.client_brief.cost_of_getting_usability_wrong.case_study.summary }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form and Function Balance -->
+  <div class="container mb-5">
+    <h2 class="h1 mb-4">Balancing Form and Function</h2>
+    <div class="row">
+      {% for item in usability_data.client_brief.balancing_form_and_function %}
+      <div class="col-md-6 mb-3">
+        <div class="card border-{{ item.bootstrap_colour }}">
+          <div class="card-body">
+            <div class="d-flex align-items-start">
+              <i class="{{ item.fa_icon }} text-{{ item.bootstrap_colour }} me-3 fs-3"></i>
+              <p class="card-text">{{ item.text }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Bottom Line -->
+  <div class="container mb-5">
+    <div class="card border-{{ usability_data.client_brief.bottom_line_for_clients.bootstrap_colour }}">
+      <div class="card-header bg-{{ usability_data.client_brief.bottom_line_for_clients.bootstrap_colour }} text-white">
+        <h2 class="card-title mb-0">
+          <i class="{{ usability_data.client_brief.bottom_line_for_clients.fa_icon }} me-2"></i>
+          The Bottom Line
+        </h2>
+      </div>
+      <div class="card-body">
+        <p class="card-text fs-5">{{ usability_data.client_brief.bottom_line_for_clients.text }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Rationale -->
+  <div class="container mb-5">
+    <h2 class="h1 mb-4">Why Bootstrap?</h2>
+    <div class="row">
+      {% for reason in usability_data.client_brief.rationale.bootstrap_choice %}
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 border-primary">
+          <div class="card-body">
+            <p class="card-text">{{ reason }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

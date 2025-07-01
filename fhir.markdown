@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: fhir
 fhir:
   fhir_text: "Each FHIR resource serves a specific purpose in healthcare data management, enabling interoperability and standardization across systems. These resources are widely used in electronic health records (EHRs), clinical decision support systems, and healthcare applications."
   fhir_resources:
