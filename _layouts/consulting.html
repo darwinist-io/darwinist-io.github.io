@@ -1,0 +1,118 @@
+---
+layout: default
+title: Healthcare Technology Consulting Services
+description: "Expert guidance for digital transformation in healthcare"
+---
+
+<div class="container-fluid p-0">
+  <!-- Hero Section -->
+  <section class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-3 fw-bold mb-3">{{ page.consulting_services.title }}</h1>
+      <p class="lead">{{ page.consulting_services.subtitle }}</p>
+      <div class="row justify-content-center mt-4">
+        <div class="col-auto">
+          <span class="badge bg-warning text-dark fs-6 me-2">
+            <i class="fas fa-stethoscope me-1"></i>Healthcare Focus
+          </span>
+          <span class="badge bg-info fs-6">
+            <i class="fas fa-chart-line me-1"></i>Digital Transformation
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Categories Overview -->
+  <section class="container py-5">
+    <div class="row text-center mb-5">
+      <div class="col-12">
+        <h2 class="text-primary mb-4">Our Services</h2>
+      </div>
+    </div>
+    
+    <div class="row g-4 mb-5">
+      {% for category_data in page.consulting_services.service_categories %}
+      {% assign category_key = category_data[0] %}
+      {% assign category = category_data[1] %}
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-{{ category.bootstrap_colour }} shadow-sm">
+          <div class="card-body text-center p-4">
+            <i class="{{ category.icon }} fa-3x text-{{ category.bootstrap_colour }} mb-3"></i>
+            <h5 class="card-title">{{ category.title }}</h5>
+            <p class="card-text text-muted">{{ category.description }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+
+  <!-- Detailed Service Categories -->
+  {% for category_data in page.consulting_services.service_categories %}
+  {% assign category_key = category_data[0] %}
+  {% assign category = category_data[1] %}
+  {% assign loop_index = forloop.index %}
+  {% assign bg_class = '' %}
+  {% if loop_index == 2 or loop_index == 4 or loop_index == 6 %}
+    {% assign bg_class = 'bg-light' %}
+  {% endif %}
+  
+  <section class="container-fluid py-5 {{ bg_class }}">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <i class="{{ category.icon }} fa-3x text-{{ category.bootstrap_colour }} mb-3"></i>
+          <h2 class="text-{{ category.bootstrap_colour }}">{{ category.title }}</h2>
+          <p class="lead text-muted">{{ category.description }}</p>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        {% for service in category.services %}
+        <div class="col-lg-6">
+          <div class="card h-100 border-{{ service.bootstrap_colour }}">
+            <div class="card-header bg-{{ service.bootstrap_colour }} {% if service.bootstrap_colour == 'light' %}text-dark{% else %}text-white{% endif %}">
+              <h5 class="card-title mb-0">{{ service.name }}</h5>
+            </div>
+            <div class="card-body">
+              <p class="card-text">{{ service.description }}</p>
+              
+              {% if service.focus_areas %}
+              <div class="mb-3">
+                <h6 class="text-{{ service.bootstrap_colour }}">Focus Areas:</h6>
+                <ul class="list-unstyled">
+                  {% for area in service.focus_areas %}
+                  <li class="mb-1">
+                    <i class="fas fa-arrow-right text-{{ service.bootstrap_colour }} me-2"></i>{{ area }}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+              {% endif %}
+              
+              {% if service.deliverables %}
+              <div class="mb-3">
+                <h6 class="text-{{ service.bootstrap_colour }}">Key Deliverables:</h6>
+                <ul class="list-unstyled">
+                  {% for deliverable in service.deliverables %}
+                  <li class="mb-1">
+                    <i class="fas fa-check text-success me-2"></i>{{ deliverable }}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+              {% endif %}
+              
+              <div class="d-flex justify-content-between align-items-center mt-3">
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+

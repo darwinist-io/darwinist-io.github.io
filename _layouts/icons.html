@@ -1,0 +1,29 @@
+---
+layout: default
+title: Icon Reference
+description: "Font Awesome icons reference for the Darwinist website"
+---
+
+{% assign icons_page = site.pages | where: "name", "icons.markdown" | first %}
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="display-4 fw-bold text-center mb-3">Icon Reference</h1>
+      <p class="lead text-center text-muted mb-5">Font Awesome icons used throughout the Darwinist website</p>
+    </div>
+  </div>
+
+  <div class="row g-3">
+    {% for icon in icons_page.icons %}
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+      <div class="card text-center h-100">
+        <div class="card-body py-3">
+          <i class="fas fa-{{ icon }} fa-2x mb-2"></i>
+          <div class="small">fas fa-{{ icon }}</div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
