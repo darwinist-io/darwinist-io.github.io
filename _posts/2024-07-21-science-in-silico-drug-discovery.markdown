@@ -1,36 +1,42 @@
 ---
 layout: post
 title: "Science In Silico: Drug Discovery & High Performance Computing"
-date: 2025-07-02
+date: 2024-07-21
 categories: [drug-discovery, hpc, biotechnology]
 tags: [AI, computational-drug-discovery, molecular-discovery, computational-biology, R&D, biotech-startups, high-performance-computing]
 author: Scott Marshall and Andrew Holway
 excerpt: "High performance computing is reshaping the drug discovery pipeline, enabling startups to accelerate timelines and reduce costs. But with technical complexity and rising infrastructure expenses, can the promise of AI-enabled medicine be sustained?"
 ---
 
-
-### Historically, the discovery and preclinical phases have taken between 5 and 7 years. However, an [article](https://media-publications.bcg.com/AI_Drug_Discovery.pdf) released in Nature in 2022 showed evidence that companies who were using HPC and AI-enabled technologies were completing this journey in less than 4 years.
-
+<br>
+*Historically, the discovery and preclinical phases have taken between 5 and 7 years. However, an [article](https://media-publications.bcg.com/AI_Drug_Discovery.pdf) released in Nature in 2022 showed evidence that companies who were using HPC and AI-enabled technologies were completing this journey in less than 4 years.*
+<br>
+<br>
+<br>
 High performance computing (HPC) has a long history in helping researchers unearth groundbreaking scientific discoveries, and as innovative new digital technologies continue to be embraced by the scientific community, HPC is becoming an increasingly important tool in the researcher’s arsenal.
 
 Within a scientific context, high performance computing generally refers to processing complex calculations at high load on commodity hardware. The scope of HPC systems can vary depending on the exact task(s) being performed, and whilst it may be easy to jump to thoughts of supercomputers and large clusters running massive scale simulations, a single machine utilising close to all its CPU resources to complete a task could still be considered HPC. A good way to define high performance computing then, is the maximising of available computing resources in the running of computationally intensive tasks.
-
+<br>
+<br>
 ## The Drug Discovery Sector
-
+<br>
 In this article, we discuss how HPC is being used by the biotechnology industry, and try to determine the true value of *in silico* research. We take a look at 10 UK based drug discovery companies, all of whom are using computationally complex scientific methods in their goal of creating brand new treatments. 
 
 As an industry, biotechnology has long embraced HPC’s potential as a research enhancing tool, tracing back to the 1970s with [Martin Karplus](https://www.nobelprize.org/prizes/chemistry/2013/karplus/facts/)’ Nobel Prize winning work developing molecular dynamics simulations.
 
 The sector's history is littered with other success stories showing the utility of HPC,  including the use of virtual screening and molecular docking simulations in the creation of the COVID-19 vaccines, increasingly powerful HPC architectures helping to reduce the cost of DNA sequencing by a factor of 10, and the recent news that a [cancer drug](https://www.llnl.gov/article/51336/llnl-bridgebio-announce-trials-supercomputing-discovered-cancer-drug) discovered by a supercomputer was approved for clinical trials in June 2024\.
-
+<br>
+<br>
 ## The Companies
-
+<br>
 ![][image1]
-
+<br>
 Formed in 2013, the London based [**Benevolent AI**](https://www.benevolent.com/) is one of the more high profile companies in the cohort. Leveraging its AI-based proprietary drug discovery platform, the company currently has a potential treatment for ulcerative colitis in clinical trials, as well as a number of other molecules in their pipeline, including some in partnership with pharma giant AstraZeneca.
-
+<br>
+<br>
 ![][image2]
-
+<br>
+<br>
 Despite only being founded in 2021, [**Charm Therapeutics**](https://charmtx.com/) has proven highly successful at securing high value venture funding, with the most recent investment raising around £16 million from NVIDIA. They are using their in house protein folding algorithms to identify potential molecules to develop through their drug discovery pipeline.
 
 ![][image3]
@@ -70,7 +76,7 @@ These companies are at a range of stages in their development and funding lifecy
 Their funding comes from a broad group of different investors, however there are a couple of common denominators. Dr. Jonathan Milner, a renowned life sciences entrepreneur, has invested in 5 of the 10 businesses, and NVentures, the investment arm of NVIDIA, has also backed a number of the companies.
 
 ## The Pharmaceutical Process
-
+<br>
 The lifecycle of taking a new drug to market can, generally speaking, be split into four main phases: discovery, pre-clinical research, clinical trials and market approval.
 
 When we look at these different phases, it appears that the need for high performance computing resources is greatest in the initial discovery phase. Despite examples of HPC use throughout the drug development process, such as in the organisation and analysis of the massive amount of data clinical trials produce, the bulk of HPC use is usually front loaded.
@@ -90,7 +96,7 @@ Historically, the discovery and preclinical phases have taken between 5 and 7 ye
 However, an article released in Nature in 2022 showed evidence that companies, much like the ones identified in this [article](https://media-publications.bcg.com/AI_Drug_Discovery.pdf), who were using HPC and AI-enabled technologies, were completing this journey in less than 4 years. This is a massive improvement, and the process should only shorten as new technologies evolve and organisations optimise their HPC resources. 
 
 ## Research and Development and HPC spend
-
+<br>
 There is a general consensus that between 5-15% of an established pharmaceutical company’s annual R\&D spending is on computational resources. When it comes to startups and SMEs though, especially ones using in silico discovery methods, this percentage is likely much higher. 
 
 From their annual budgets, we know that in 2023, Exscientia spent [£128 million](https://investors.exscientia.ai/press-releases/press-release-details/2024/Exscientia-Business-and-Financial-Update-for-the-Full-Year-2023/default.aspx) on R\&D, and BenevolentAI [£60 million](https://www.benevolent.com/application/files/2417/1136/4663/BenevolentAI_Annual_Report_2023.pdf), whilst HealX spent around [£19 million](https://find-and-update.company-information.service.gov.uk/company/09018507/filing-history) in 2022\. Even if we take an overly conservative estimate of how much was diverted towards computing, it seems clear that companies are regularly spending an appreciable portion of their total budgets on these resources.
@@ -102,7 +108,7 @@ The amount of these resources being allocated to HPC can depend on a number of t
 Generally, breakdowns of R\&D budgets are closely guarded, but we do know from a discussion with HealX that they are currently spending around £350,000 a year on HPC resources from Amazon Web Services. Interestingly, they were still spending that amount, even though none of the molecules in their pipeline were at a computationally intense period in their lifecycle.
 
 ## The Cost of Inefficient HPC
-
+<br>
 The widespread integration of computationally intensive technologies brings with it an inevitable rise in a biotech company’s need for computational resources, but setting up and maintaining the necessary high performance computing infrastructure can be risky and expensive. 
 
 HPC professionals with the required level of specific technical skills and experience do not come cheap, and the growing understanding of the necessity of HPC has led to companies across a wide variety of sectors hunting for the relevant expertise in an ever shrinking talent pool. 
@@ -116,7 +122,7 @@ This scarcity of HPC expertise, and the rising costs that come with hiring, has 
 Additionally, due to the extremely sensitive nature of medical data, all research needs to be in full compliance with regulatory guidelines. Horror stories abound of unauthorised access to patient data being granted due to poor HPC infrastructure management, and breaches like this could result in costly fines and lawsuits.
 
 ## Conclusion
-
+<br>
 High performance computing is transforming the drug discovery process, allowing biotech companies to identify and develop new treatments faster than ever before. By harnessing AI, firms can shorten early-stage development from years to months, improving efficiency and cutting costs. However, this progress is not without challenges such as rising HPC expenses and talent shortages. For startups, where nearly all spending is R & D-focused, effective use of HPC is crucial, and rising HPC expenses and talent shortages are providing challenges to progress.  
 
 
