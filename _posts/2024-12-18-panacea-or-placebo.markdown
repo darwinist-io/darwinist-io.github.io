@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Panacea or Placebo? The Prescription for Language Models in Healthcare"
-date: 2025-01-28
+date: 2024-12-18
 categories: [AI, Healthcare, Technology]
 tags: [LLM, ChatGPT, medical-ai, healthcare-technology, artificial-intelligence]
 author: Scott Marshall and Andrew Holway
-excerpt: "According to the World Health Organisation, large language models (LLMs) have been adopted faster than any consumer application in history. But when we're talking about using them in safety critical situations, in matters of life and death, can they really be relied upon?"
+excerpt: "Large language models are being adopted faster than any technology in history, but in life-or-death settings like healthcare, can they be trusted? We explore how language models are being used today—and what it will take to use them safely tomorrow."
 ---
 
 
@@ -13,24 +13,26 @@ excerpt: "According to the World Health Organisation, large language models (LLM
 
 
 *Fancy letting ChatGPT take a look at that lump?*
-
-According to the World Health Organisation, large language models (LLMs) have been adopted faster than any consumer application in history. Chances are you’ve already played around on ChatGPT. Maybe you’re even one of the 20% of UK GPs who use it in their daily clinical practice.
+<br>
+<br>
+According to the [World Health Organisation](https://iris.who.int/bitstream/handle/10665/375579/9789240084759-eng.pdf?sequence=1), large language models (LLMs) have been adopted faster than any consumer application in history. Chances are you’ve already played around on ChatGPT. Maybe you’re even one of the [20%](https://www.theguardian.com/society/2024/sep/17/one-in-five-gps-use-ai-such-as-chatgpt-for-daily-tasks-survey-finds) of UK GPs who use it in their daily clinical practice.
 
 The ability for LLMs to automate away some of the minutiae of everyday life is plain to see, and clearly there is an appetite within the healthcare industry to adopt these new tools. But when we’re talking about using them in safety critical situations, in matters of life and death, can they really be relied upon?
 
 In this article we look at how language models are currently being used in healthcare settings, and project forward to see how they might be injected into the clinical landscape of the future.
-
+<br>
+<br>
 ## The Good, The Bad, and The LLM
-
+<br>
 Their recent proliferation has firmly ingrained them into public consciousness, but it's likely that when a lot of people hear the term LLM, what they are actually thinking of is ChatGPT. Given its ubiquity, this is somewhat understandable, as mainstream models like ChatGPT are more generalist, consumer facing models, tuned for mass consumption. 
 
-They’re great at tasks like succinctly summarising information and generating ideas and prompts for creative endeavours, but tend to struggle when tasked with delivering replicable answers to domain specific queries which demand a high level of accuracy. As Nature puts it, they can produce helpful and convincing responses, without any overriding guarantees regarding their accuracy or alignment with fact.
+They’re great at tasks like succinctly summarising information and generating ideas and prompts for creative endeavours, but tend to struggle when tasked with delivering replicable answers to domain specific queries which demand a high level of accuracy. As [Nature](https://www.nature.com/articles/s41562-023-01744-0.epdf) puts it, they can produce helpful and convincing responses, without any overriding guarantees regarding their accuracy or alignment with fact.
 
 Language models in general are tools designed to output text in a way that mimics human communication, and on a base level they are simply designed to choose the appropriate next word in a string of text. An LLM assigns a numeric probability to the list of words that could potentially follow, and then assesses them for suitability against its intended output settings. More naturalistic language is produced if the model is allowed to occasionally choose words that are not at the top of the probability pile. 
 
 Different parameters, or settings, within the model control the randomisation rate, and the temperature parameter is used to influence the creativity of an LLM’s responses. The higher the temperature, the more likely the LLM is to use potentially unexpected language, which is great if you want florid prose, but disastrous if, like in healthcare, you need consistent, factual information. For a language model to be suitable for clinical use, it will need to have all the potential for creativity stamped out, and the temperature gauge needs to be set to Antarctic levels.
 
-Despite some headline grabbing reports claiming that ChatGPT is just as smart as your neighborhood clinician, the current crop of household names in the LLM space are not appropriate for deployment into clinical settings. They can be trained to outperform doctors in certain medical exams, but this is merely an example of their superior knowledge storage and retrieval skills. Plonk an LLM into the chaos of a hospital ward and it very quickly becomes apparent that they are no substitute for a good old fashioned human touch.
+Despite some headline grabbing [reports](https://hai.stanford.edu/news/chatgpt-out-scores-medical-students-complex-clinical-care-exam-questions) claiming that ChatGPT is just as smart as your neighborhood clinician, the current crop of household names in the LLM space are not appropriate for deployment into clinical settings. They can be trained to outperform doctors in certain medical exams, but this is merely an example of their superior knowledge storage and retrieval skills. Plonk an LLM into the chaos of a hospital ward and it very quickly becomes apparent that they are no substitute for a good old fashioned human touch.
 
 Whilst they may have medical literature in the training database, they also form their responses based on millions of other sources, including outdated or incorrect information, and straight up fiction. As they cannot determine which of the sources are empirical and which are flights of fancy, they can very easily end up hallucinating, outputting answers to medical queries which contain dangerous inaccuracies. 
 
@@ -39,22 +41,24 @@ This potential for hallucination highlights how important the quality of trainin
 Ultimately, a language model is only as good as the data it is trained on, and special care needs to be taken to ensure that training data is structured in a way a model can learn from. Simply feeding an algorithm a copy of Gray’s Anatomy, for example, is unlikely to be effective, as although it contains a wealth of medical knowledge, each individual statement contained within it relies on a huge amount of context from other pages in the book.
 
 Training not only influences the verisimilitude of a model’s responses, but also its ability to output in appropriate formats. If language models are to be used safely in clinical settings, not only do the responses need to be extremely accurate, they need to be consistently replicable and delivered in a way that is so tightly defined as to negate the possibility of erroneous output.
-
+<br>
+<br>
 ## Automating For Life
-
+<br>
 Despite the industry still being in its nascent stages, there is already a raft of companies looking to bring non diagnostic language model products into the healthcare space. Many companies are building services that seek to automate away a lot of the minutiae of low risk, day to day patient interactions and reduce overall administrative burden.
 
-A study shows that clinicians spend nearly 2 additional daily hours outside of their core duties filling in documentation, and this extra paperwork is surely a key ingredient in why so many doctors are reporting [high levels](https://www.bma.org.uk/news-and-opinion/stress-on-doctors-reaches-all-time-high#:~:text=Forty%2Dtwo%20per%20cent%20of,per%20cent%20respectively%20in%202021.) of burnout. Automated dictation and notation tools, often called ambient AI, can listen into clinical patient interactions, transcribing the conversation and producing a report for doctor signoff upon completion, saving them valuable time at the end of the day.
+A [study](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2790396) shows that clinicians spend nearly 2 additional daily hours outside of their core duties filling in documentation, and this extra paperwork is surely a key ingredient in why so many doctors are [reporting](https://www.bma.org.uk/news-and-opinion/stress-on-doctors-reaches-all-time-high#:~:text=Forty%2Dtwo%20per%20cent%20of,per%20cent%20respectively%20in%202021.) high levels of burnout. Automated dictation and notation tools, often called ambient AI, can listen into clinical patient interactions, transcribing the conversation and producing a report for doctor signoff upon completion, saving them valuable time at the end of the day.
 
-LLM based [chatbots](https://medicalbrain.com/) and AI voice assistants are showing great promise in handling interpersonal administration tasks such as appointment booking and billing management, and when we consider the fact that there are over 25 billion global patient interactions annually, it is easy to see the value they can bring.
+LLM based [chatbots](https://medicalbrain.com/) and [AI voice assistants](https://www.neural-voice.ai/) are showing great promise in handling interpersonal administration tasks such as appointment booking and billing management, and when we consider the fact that there are over 25 billion global patient interactions annually, it is easy to see the value they can bring.
 
 In general, LLMs excel at parsing and condensing vast streams of data, summarising, translating and rephrasing complex bodies of text. Because of this, they are at their most valuable in text dense environments like healthcare facilities, where copious amounts of doctors’ notes, treatment plans and financial paperwork is created daily. Their ability to draw on their knowledge reserves and recognise patterns to identify and link pertinent information can also offer useful insights beyond the immediate scope of human attention, providing clinicians with an additional digital colleague to pool knowledge with.
-
+<br>
+<br>
 ## Quality of Outcome
-
+<br>
 LLMs are also currently delivering value in the healthcare space through their capability to massively increase the efficiency of quality management operations. LLMs are extremely proficient in pattern recognition, and can parse and analyse data infinitely faster than any human could ever manage.
 
-Danish company Corti is one such organisation leveraging these factors, and as part of their suite of AI tools, have built a system which can quality check transcriptions of medical conversations against clinical protocols.
+Danish company [Corti](https://www.corti.ai/) is one such organisation leveraging these factors, and as part of their suite of AI tools, have built a system which can quality check transcriptions of medical conversations against clinical protocols.
 
 Corti’s LLM monitors real world clinical interactions, such as those between a caller and emergency service dispatchers, and creates a real time transcription of the conversation. The model cross references information given by a live caller against its knowledge reserves and provides handlers with active prompts which can aid the triage process. The LLM is not trying to diagnose the patient or tell the responder what to say, but rather supplement their knowledge, for example by bringing up the potential side effects of a drug a caller has said they are taking.  
 ![][image2]  
@@ -63,12 +67,13 @@ Corti’s LLM monitors real world clinical interactions, such as those between a
 The fact that the LLM handles the transcription work reduces the administrative burden on the professional in the moment, and it also allows a model to run quality assessment on the call. Generally, human led quality monitoring teams will listen back to calls retrospectively, and can only ever assess a tiny percentage of the total. Because LLMs can analyse data instantaneously, there is now the potential for every single call to be assessed. This provides medical professionals using Corti with a powerful, impartial feedback mechanism, which encourages them to analyse and improve their own performance.
 
 Additionally, LLMs like Corti’s can compare transcriptions and internal documents against regulatory guidelines and clinical protocols, highlighting areas in communications which may be unclear or incorrect, alerting management to the need for new policies or further training.
-
+<br>
+<br>
 ## Psyche
-
+<br>
 One of the areas of healthcare where LLMs have the most potential to deliver real value is in the assessment, monitoring and treatment of patients struggling with their mental health. The current landscape of psychiatric treatment is notoriously inefficient, with patients often having to choose between long waiting times or expensive private treatments. This situation can leave the most vulnerable members of society struggling to access the care they need.
 
-Psychiatric assessment methods are often number based, with patients filling in surveys to give clinicians insight into their current mental state and rate them against diagnosis benchmarks for specific conditions. LLMs can easily automate these kinds of tasks, and companies such as Limbic have developed products doing exactly that. Unlike with the majority of LLMs operating in the healthcare space, who specifically distance themselves from being used in a diagnostic capacity, Limbic is able to instantly assess patients against set criteria, providing clinicians with a recommended psychiatric diagnosis at a 92% accuracy rate.
+Psychiatric assessment methods are often number based, with patients filling in surveys to give clinicians insight into their current mental state and rate them against diagnosis benchmarks for specific conditions. LLMs can easily automate these kinds of tasks, and companies such as [Limbic](https://www.limbic.ai/) have developed products doing exactly that. Unlike with the majority of LLMs operating in the healthcare space, who specifically distance themselves from being used in a diagnostic capacity, Limbic is able to instantly assess patients against set criteria, providing clinicians with a recommended psychiatric diagnosis at a 92% accuracy rate.
 
 ![][image3]  
 *Limbic AI integrates an app with a hospital’s Electronic Health Record*
@@ -76,9 +81,10 @@ Psychiatric assessment methods are often number based, with patients filling in 
 Solutions like this have the potential to democratise access to mental health care, reducing the administrative and triaging burden for clinicians, and offering patients a quicker path to clarity regarding their situation. Additionally, they offer the opportunity for people to engage with a service without the fear of embarrassment and social stigma that can sometimes be associated with mental health. They also are available 24/7, meaning that potentially vulnerable people can receive help at a time that suits them.
 
 Mental health issues are also rarely simple to understand and address, but LLMs are excellent at summarising and reformatting complex data. By breaking down intricate co-morbidities and treatment plans into language tailored to the recipient’s level of understanding, these tools can prove to be invaluable resources in increasing patient comprehension and bridging the knowledge gap, helping reduce some of the anxieties associated with psychiatric disorders.
-
+<br>
+<br>
 ## Smaller is Better
-
+<br>
 As we noted above, LLMs in their current guise are unlikely to see any traction into clinical settings. But this doesn’t mean that there isn’t a way to engineer a language model for clinical effectiveness. Medical language models will need to be much smaller in scope and scale than the likes of ChatGPT, and the term small language model (SLM) is probably a better way to define them. Such SLMs will need to have extremely narrow use cases, and be single task algorithms trained on specific medical data and formatted to output in a highly controlled manner. They will need to be set to the lowest temperature to remove the possibility for fanciful answers, and they will need to be trained on extremely specific banks of data, giving them a laser focus on the specific output required.
 
 Utilising these smaller models creates the possibility for hospitals to train and manage their own in house algorithms. The time and financial costs associated with training a traditional LLM puts them beyond the reach of the majority of organisations, but by focusing on developing niche, highly specific models that are orders of magnitude smaller, the associated costs are brought down to something much more feasible. 
@@ -91,7 +97,7 @@ There are a couple of caveats to consider here, however. Despite needing much le
 
 Additionally, one of the main repositories for a hospital's data is their Electronic Health Record (EHR), but there are still a large number of hospitals across the world who do not currently utilise digital record keeping systems.
 
-These issues are solvable, though. Hospitals could join forces with other institutions who have similar clinical protocols and patient demographics to pool data, or could purchase an external foundational model and retrain it on the relevant protocols. There are also companies like Width AI who are working on LLMs who can handle the translation of paper documents into digital files, helping hospitals across the digital divide. 
+These issues are solvable, though. Hospitals could join forces with other institutions who have similar clinical protocols and patient demographics to pool data, or could purchase an external foundational model and retrain it on the relevant protocols. There are also companies like [Width AI](https://www.width.ai/) who are working on LLMs who can handle the translation of paper documents into digital files, helping hospitals across the digital divide. 
 
 One such company who have already recognised the necessity of using smaller language models to ensure patient safety whilst still delivering value is [Hippocratic AI](https://www.hippocraticai.com/). They have built the Polaris system, a network of healthcare specific language models, or agents, with a customer facing 100 billion parameter model supported by a suite of smaller models representing different medical specialisms. Each of these smaller models is trained on a highly focused set of data, which allows it to provide highly specific outputs. For example, one agent is trained specifically on over the counter drug data, allowing it to recall dosage instructions and potential side effects.
 
@@ -100,17 +106,19 @@ The central model interacts with a patient via a conversational AI voice assista
 *Hippocratic AI’s workflow.*
 
 This cumulative network effect allows Hippocratic’s product to have the luxury of trillions of total parameters whilst ensuring that a range of patient queries can be answered with the prerequisite level of accuracy, as the relevant information is neatly sandboxed in tightly controlled environments designed only for outputting core knowledge.
-
+<br>
+<br>
 ## Why AI Oughta
-
+<br>
 Looking forward somewhat, LLMs also have the potential to deliver genuine impact through their summarisation of patient records. In general, hospitals are extremely successful in delivering acute, short term care. However, there is often a stark contrast when it comes to managing long term chronic conditions, particularly, as is often the case, where there are co-morbidities present. 
 
 One of the main drivers of this inequality is likely to be the sheer amount of medical data that a clinician needs to navigate to successfully manage chronic care, and the disparate formats the information is stored in. LLMs excel in reorganising and condensing fragmented data, meaning they can be used to standardise and summarise patient records, greatly reducing the clinician’s cognitive load and ensuring that important details aren’t missed.
 
 There is also the future potential for LLMs to have significant clinical impact through helping clinicians design and deliver evidence based treatment plans, streamlining the operational efficiency of hospitals, and interpreting genomic data to aid the personalised medicine revolution. Language models could compare and contrast an individual’s symptoms with cases in their database to provide clinicians with suggestions as to suitable prescription paths.
-
+<br>
+<br>
 ## Conclusion
-
+<br>
 Despite being a relatively new technology, language models have already begun to deliver value in healthcare. Whilst the current headline grabbers are not appropriate for clinical deployment, more focused language model tools are streamlining the clinical administrative process by automating a lot of the repetitive tasks bogging down clinicians, and their capability to store and transform data is helping reduce clinical burnout and democratise access to mental health services.
 
 There is great potential for the future of language models to massively streamline chronic care and deliver succinct, accurate patient summaries and treatment plans, but much smaller models with tightly controlled inputs and outputs will need to be trained to ensure patient safety remains paramount. 
