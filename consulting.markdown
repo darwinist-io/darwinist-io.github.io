@@ -1,5 +1,5 @@
 ---
-layout: consulting
+layout: default
 consulting_services:
   title: "Healthcare Technology Development and Consulting Services"
   subtitle: "Expert guidance for digital transformation in healthcare"

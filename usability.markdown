@@ -1,5 +1,5 @@
 ---
-layout: usability
+layout: default
 title: "Usability-Driven Product"
 hero_image: /assets/usability-hero.jpg
 description: >

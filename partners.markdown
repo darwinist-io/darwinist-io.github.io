@@ -1,5 +1,5 @@
 ---
-layout: partners
+layout: default
 title: Our Partners
 subtitle: We work with leading organizations to deliver the best solutions.
 partners:

@@ -1,5 +1,5 @@
 ---
-layout: usability_specification
+layout: default
 title: "Darwinist Usability Specification"
 description: "Comprehensive usability specification following IEC 62366-1 and WCAG 2.1 AA standards for healthcare software"
 version: "1.0"
