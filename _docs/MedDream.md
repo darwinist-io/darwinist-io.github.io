@@ -6,7 +6,7 @@ date: 2025-05-28
 author: "Darwinist Team"
 tags: ["DICOM Viewer", "Medical Imaging", "NHS", "Zero Footprint", "Radiology", "Browser-based", "CE Certified", "HTML5"]
 category: "Medical Imaging Solutions"
-featured: true
+featured: false
 toc: true
 excerpt: "The MedDream DICOM Viewer is a web-based, diagnostic-grade medical imaging viewer that enables NHS clinicians to securely access and interact with medical images from any location, on any device, without software installation."
 ---

@@ -6,7 +6,8 @@ date: 2025-06-06
 author: "Darwinist Team"
 tags: ["Clinical AI", "Large Language Models", "Hospital AI", "Clinical Decision Support", "Healthcare AI Strategy", "EHR Analytics"]
 category: "Medical AI Solutions"
-featured: true
+featured: false
+hidden: true
 toc: true
 excerpt: "Strategic framework for NHS Trusts to develop fine-tuned clinical language models using institutional knowledge and patient data, enabling precision clinical decision support, advanced cohort analytics, and continuous learning health systems while maintaining data privacy and clinical governance."
 ---

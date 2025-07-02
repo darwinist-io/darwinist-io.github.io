@@ -6,7 +6,7 @@ date: 2025-05-27
 author: "Darwinist Team"
 tags: ["NHS", "Medical Imaging", "Healthcare Infrastructure", "DICOM", "Market Analysis", "Healthcare Policy", "Radiology"]
 category: "Healthcare Infrastructure"
-featured: true
+featured: false
 toc: true
 excerpt: "Comprehensive analysis of the NHS Image Exchange Portal operated by Sectra, examining how this national platform enables secure transfer of 6+ million daily DICOM studies across 500+ healthcare organizations, supporting critical patient care workflows while exploring the market dynamics and access considerations for different provider types."
 ---

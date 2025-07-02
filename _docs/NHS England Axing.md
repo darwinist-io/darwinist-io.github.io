@@ -6,7 +6,7 @@ date: 2025-03-11
 author: "Darwinist Team"
 tags: ["NHS Reform", "Healthcare Policy", "Government Control", "NHS England", "Healthcare Governance", "Wes Streeting"]
 category: "Healthcare Policy"
-featured: true
+featured: false
 toc: true
 excerpt: "Analysis of Wes Streeting's landmark decision to restructure NHS England, cutting workforce from 13,000 to 6,500 staff while bringing the organization back under direct government control, examining the implications for healthcare delivery across England's integrated care system."
 ---

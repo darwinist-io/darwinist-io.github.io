@@ -3,15 +3,100 @@ layout: default
 title: Documents
 ---
 
+{% assign sorted_docs = site.docs | where_exp: "doc", "doc.hidden != true" | sort: "date" | reverse %}
+{% assign featured_docs = sorted_docs | where: "featured", true %}
+{% assign non_featured_docs = sorted_docs | where_exp: "doc", "doc.featured != true" %}
+
 <div class="container py-5">
   <div class="row">
-    <div class="col-lg-8 mx-auto">
+    <div class="col-lg-10 mx-auto">
       <h1 class="display-4 fw-bold text-center mb-5">Documents</h1>
       
+      <!-- Featured Documents Section -->
+      {% if featured_docs.size > 0 %}
+      <div class="mb-5">
+        <h2 class="h3 text-success mb-4">
+          <i class="fas fa-star me-2"></i>Featured Documents
+        </h2>
+        <div class="row">
+          {% for doc in featured_docs %}
+          <div class="col-12 mb-4">
+            <div class="card h-100 border-success shadow">
+              <div class="card-header bg-success text-white">
+                <h5 class="card-title mb-0">
+                  <a href="{{ doc.url | relative_url }}" class="text-white text-decoration-none">{{ doc.title }}</a>
+                </h5>
+              </div>
+              <div class="card-body">
+                {% if doc.excerpt %}
+                <p class="card-text">{{ doc.excerpt }}</p>
+                {% endif %}
+                <div class="d-flex justify-content-between align-items-center">
+                  {% if doc.date %}
+                  <small class="text-muted">
+                    <i class="fas fa-calendar-alt me-1"></i>{{ doc.date | date: "%B %d, %Y" }}
+                  </small>
+                  {% endif %}
+                  {% if doc.tags %}
+                  <div>
+                    {% for tag in doc.tags %}
+                    <span class="badge bg-success text-white me-1">{{ tag }}</span>
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      
+      <!-- Other Documents Section -->
+      {% if non_featured_docs.size > 0 %}
+      <div class="mb-5">
+        <h2 class="h3 text-secondary mb-4">
+          <i class="fas fa-file-alt me-2"></i>All Documents
+        </h2>
+        <div class="row">
+          {% for doc in non_featured_docs %}
+          <div class="col-12 mb-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="{{ doc.url | relative_url }}" class="text-decoration-none">{{ doc.title }}</a>
+                </h5>
+                {% if doc.excerpt %}
+                <p class="card-text text-muted">{{ doc.excerpt }}</p>
+                {% endif %}
+                <div class="d-flex justify-content-between align-items-center">
+                  {% if doc.date %}
+                  <small class="text-muted">
+                    <i class="fas fa-calendar-alt me-1"></i>{{ doc.date | date: "%B %d, %Y" }}
+                  </small>
+                  {% endif %}
+                  {% if doc.tags %}
+                  <div>
+                    {% for tag in doc.tags %}
+                    <span class="badge bg-light text-dark me-1">{{ tag }}</span>
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      
+      <!-- Show all documents if none are featured -->
+      {% if featured_docs.size == 0 and sorted_docs.size > 0 %}
       <div class="row">
-        {% for doc in site.docs %}
-        {% unless doc.hidden %}
-        <div class="col-md-12 mb-4">
+        {% for doc in sorted_docs %}
+        <div class="col-12 mb-4">
           <div class="card h-100 shadow-sm">
             <div class="card-body">
               <h5 class="card-title">
@@ -20,24 +105,36 @@ title: Documents
               {% if doc.excerpt %}
               <p class="card-text text-muted">{{ doc.excerpt }}</p>
               {% endif %}
-              {% if doc.date %}
-              <small class="text-muted">
-                <i class="fas fa-calendar-alt me-1"></i>{{ doc.date | date: "%B %d, %Y" }}
-              </small>
-              {% endif %}
-              {% if doc.tags %}
-              <div class="mt-2">
-                {% for tag in doc.tags %}
-                <span class="badge bg-light text-dark me-1">{{ tag }}</span>
-                {% endfor %}
+              <div class="d-flex justify-content-between align-items-center">
+                {% if doc.date %}
+                <small class="text-muted">
+                  <i class="fas fa-calendar-alt me-1"></i>{{ doc.date | date: "%B %d, %Y" }}
+                </small>
+                {% endif %}
+                {% if doc.tags %}
+                <div>
+                  {% for tag in doc.tags %}
+                  <span class="badge bg-light text-dark me-1">{{ tag }}</span>
+                  {% endfor %}
+                </div>
+                {% endif %}
               </div>
-              {% endif %}
             </div>
           </div>
         </div>
-        {% endunless %}
         {% endfor %}
       </div>
+      {% endif %}
+      
+      <!-- No documents message -->
+      {% if sorted_docs.size == 0 %}
+      <div class="text-center py-5">
+        <i class="fas fa-file-alt fa-3x text-muted mb-3"></i>
+        <h3 class="text-muted">No documents available</h3>
+        <p class="text-muted">Check back later for new documents.</p>
+      </div>
+      {% endif %}
+      
     </div>
   </div>
 </div>
