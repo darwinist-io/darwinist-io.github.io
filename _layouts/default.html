@@ -21,6 +21,26 @@
         gtag('config', '{{ site.google_analytics }}');
       </script>
       {% endif %}
+  <!-- Matomo Tag Manager -->
+  <script>
+    var _mtm = window._mtm = window._mtm || [];
+    _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+    (function() {
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src='https://cdn.matomo.cloud/darwinist.matomo.cloud/container_Uth7yAfG.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Tag Manager -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/colours.css">
+    {% if page.custom_css %}
+      <link rel="stylesheet" href="{{ page.custom_css | relative_url }}">
+    {% endif %}
+    {% if page.custom_js %}
+      <script src="{{ page.custom_js | relative_url }}"></script>
+    {% endif %}
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
