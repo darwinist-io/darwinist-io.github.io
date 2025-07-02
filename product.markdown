@@ -3,10 +3,8 @@ layout: product
 title: Product
 hero_image: /assets/surgery-kit.jpg
 description: "NoCode platform for healthcare providers to create, deploy, manage AI applications and medical devices in a safe, regulated and secure way."
-hero_title: "Launch Clinical Pathways in Hours, Not Months"
-hero_subtitle: "NoCode platform for healthcare providers to create, deploy, and manage AI applications and medical devices in a safe, regulated, and secure way."
-hero_tagline: "Empowering Healthcare with Seamless Technology"
-hero_subtext: "We integrate, distribute, and support world-class medical software for hospitals and clinics."
+hero_title: "AI Enhanced Clinical Pathway Builder"
+hero_subtitle: "Safely orchestrate AI-powered patient journeys."
 
 # Carousel Section
 carousel:

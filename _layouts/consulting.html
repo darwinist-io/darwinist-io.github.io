@@ -8,7 +8,7 @@ description: "Expert guidance for digital transformation in healthcare"
   <!-- Hero Section -->
   <section class="bg-primary text-white text-center py-5">
     <div class="container">
-      <h1 class="display-4 fw-bold mb-3">{{ page.consulting_services.title }}</h1>
+      <h1 class="display-3 fw-bold mb-3">{{ page.consulting_services.title }}</h1>
       <p class="lead">{{ page.consulting_services.subtitle }}</p>
       <div class="row justify-content-center mt-4">
         <div class="col-auto">
@@ -27,8 +27,7 @@ description: "Expert guidance for digital transformation in healthcare"
   <section class="container py-5">
     <div class="row text-center mb-5">
       <div class="col-12">
-        <h2 class="text-primary mb-4">Our Consulting Services</h2>
-        <p class="lead text-muted">Comprehensive healthcare technology consulting across all aspects of digital transformation</p>
+        <h2 class="text-primary mb-4">Our Services</h2>
       </div>
     </div>
     
@@ -42,7 +41,6 @@ description: "Expert guidance for digital transformation in healthcare"
             <i class="{{ category.icon }} fa-3x text-{{ category.bootstrap_colour }} mb-3"></i>
             <h5 class="card-title">{{ category.title }}</h5>
             <p class="card-text text-muted">{{ category.description }}</p>
-            <span class="badge bg-{{ category.bootstrap_colour }}">{{ category.services.size }} Services</span>
           </div>
         </div>
       </div>
@@ -108,9 +106,6 @@ description: "Expert guidance for digital transformation in healthcare"
               {% endif %}
               
               <div class="d-flex justify-content-between align-items-center mt-3">
-                <button class="btn btn-outline-{{ service.bootstrap_colour }} btn-sm" data-bs-toggle="modal" data-bs-target="#contactModal" data-service="{{ service.name }}">
-                  <i class="fas fa-envelope me-1"></i>Get Quote
-                </button>
               </div>
             </div>
           </div>
@@ -121,182 +116,3 @@ description: "Expert guidance for digital transformation in healthcare"
   </section>
   {% endfor %}
 
-  <!-- Engagement Models -->
-  <section class="container py-5">
-    <div class="row mb-5">
-      <div class="col-12 text-center">
-        <h2 class="text-primary">Engagement Models</h2>
-        <p class="lead text-muted">Flexible engagement options to meet your specific needs</p>
-      </div>
-    </div>
-    
-    <div class="row g-4">
-      {% for model in page.consulting_services.engagement_models %}
-      <div class="col-lg-4">
-        <div class="card h-100 text-center border-{{ model.bootstrap_colour }}">
-          <div class="card-body p-4">
-            <div class="mb-3">
-              {% if forloop.index == 1 %}
-                <i class="fas fa-search fa-3x text-{{ model.bootstrap_colour }}"></i>
-              {% elsif forloop.index == 2 %}
-                <i class="fas fa-handshake fa-3x text-{{ model.bootstrap_colour }}"></i>
-              {% else %}
-                <i class="fas fa-headset fa-3x text-{{ model.bootstrap_colour }}"></i>
-              {% endif %}
-            </div>
-            <h5 class="card-title text-{{ model.bootstrap_colour }}">{{ model.name }}</h5>
-            <p class="card-text">{{ model.description }}</p>
-            <div class="mt-3">
-              <span class="badge bg-{{ model.bootstrap_colour }} fs-6">{{ model.duration }}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </section>
-
-  <!-- Pricing Approach -->
-  <section class="container py-5 bg-light">
-    <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <h2 class="text-{{ page.consulting_services.pricing_approach.bootstrap_colour }} mb-4">{{ page.consulting_services.pricing_approach.title }}</h2>
-        <p class="lead mb-4">{{ page.consulting_services.pricing_approach.description }}</p>
-        
-        <div class="row g-3 mb-4">
-          {% for option in page.consulting_services.pricing_approach.options %}
-          <div class="col-md-4">
-            <div class="card border-{{ option.bootstrap_colour }}">
-              <div class="card-body text-center">
-                {% if forloop.index == 1 %}
-                  <i class="fas fa-file-contract fa-2x text-{{ option.bootstrap_colour }} mb-2"></i>
-                {% elsif forloop.index == 2 %}
-                  <i class="fas fa-calendar-alt fa-2x text-{{ option.bootstrap_colour }} mb-2"></i>
-                {% else %}
-                  <i class="fas fa-target fa-2x text-{{ option.bootstrap_colour }} mb-2"></i>
-                {% endif %}
-                <p class="card-text">{{ option.name }}</p>
-                <span class="badge bg-{{ option.bootstrap_colour }}">
-                  {% if forloop.index == 1 %}
-                    Fixed Price
-                  {% elsif forloop.index == 2 %}
-                    Retainer
-                  {% else %}
-                    Outcome Based
-                  {% endif %}
-                </span>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-        
-        <div class="alert alert-info">
-          <i class="fas fa-info-circle me-2"></i>
-          {{ page.consulting_services.pricing_approach.note }}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="container py-5">
-    <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <h2 class="text-{{ page.consulting_services.contact.bootstrap_colour }} mb-3">{{ page.consulting_services.contact.title }}</h2>
-        <p class="lead mb-4">{{ page.consulting_services.contact.subtitle }}</p>
-        
-        <div class="row g-3">
-          <div class="col-md-6">
-            <a href="mailto:{{ page.consulting_services.contact.email }}" class="btn btn-{{ page.consulting_services.contact.bootstrap_colour }} btn-lg w-100">
-              <i class="fas fa-envelope me-2"></i>Email Us
-            </a>
-          </div>
-          <div class="col-md-6">
-            <a href="{{ page.consulting_services.contact.linkedin }}" target="_blank" class="btn btn-outline-{{ page.consulting_services.contact.bootstrap_colour }} btn-lg w-100">
-              <i class="fab fa-linkedin me-2"></i>LinkedIn
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- Contact Modal -->
-<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="contactModalLabel">Request Consultation</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form id="consultingForm">
-          <div class="mb-3">
-            <label for="serviceName" class="form-label">Service Interest</label>
-            <input type="text" class="form-control" id="serviceName" readonly>
-          </div>
-          <div class="mb-3">
-            <label for="contactName" class="form-label">Name</label>
-            <input type="text" class="form-control" id="contactName" required>
-          </div>
-          <div class="mb-3">
-            <label for="contactEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="contactEmail" required>
-          </div>
-          <div class="mb-3">
-            <label for="contactOrganization" class="form-label">Organization</label>
-            <input type="text" class="form-control" id="contactOrganization">
-          </div>
-          <div class="mb-3">
-            <label for="contactMessage" class="form-label">Message</label>
-            <textarea class="form-control" id="contactMessage" rows="3" placeholder="Tell us about your specific needs and timeline..."></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="submitConsultingForm()">Send Request</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-// Handle modal service population
-document.addEventListener('DOMContentLoaded', function() {
-  var contactModal = document.getElementById('contactModal');
-  contactModal.addEventListener('show.bs.modal', function (event) {
-    var button = event.relatedTarget;
-    var service = button.getAttribute('data-service');
-    var serviceInput = contactModal.querySelector('#serviceName');
-    serviceInput.value = service;
-  });
-});
-
-function submitConsultingForm() {
-  var form = document.getElementById('consultingForm');
-  var formData = new FormData(form);
-  var service = document.getElementById('serviceName').value;
-  var name = document.getElementById('contactName').value;
-  var email = document.getElementById('contactEmail').value;
-  var organization = document.getElementById('contactOrganization').value;
-  var message = document.getElementById('contactMessage').value;
-  
-  var subject = 'Consulting Request: ' + service;
-  var body = 'Name: ' + name + '\n' +
-             'Email: ' + email + '\n' +
-             'Organization: ' + organization + '\n' +
-             'Service: ' + service + '\n\n' +
-             'Message:\n' + message;
-  
-  var mailtoLink = 'mailto:{{ page.consulting_services.contact.email }}?subject=' + 
-                   encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-  
-  window.location.href = mailtoLink;
-  
-  var modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
-  modal.hide();
-}
-</script>

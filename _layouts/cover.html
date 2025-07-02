@@ -8,7 +8,7 @@ layout: default
         <div class="container py-5">
             <img src="{{ site.baseurl }}/assets/darwinist-logo-white.png" alt="Darwinist Logo" class="mb-4" style="max-width:15rem;">
             <h1 class="display-4 fw-bold">{{ page.hero_tagline }}</h1>
-            <p class="lead mb-4">{{ page.hero_subtext }}</p>
+            <p class="lead text-white fw-bold m-4">{{ page.hero_subtext }}</p>
             {% if page.cta_text and page.cta_button and page.cta_link %}
             <a href="{{ page.cta_link }}" class="btn btn-primary btn-lg">{{ page.cta_button }}</a>
             {% endif %}
@@ -72,9 +72,9 @@ layout: default
     <section class="text-white text-center d-flex align-items-center justify-content-center" style="background: #007bff; color: white; min-height: 50vh;">
         <div class="container">
         <h2 class="display-4 fw-bold mb-4">Book a Meeting with Us</h2>
-        <p class="lead mb-4">Discover how Darwinist can automate your clinical pathways for £1 per patient.</p>
-        <a href="mailto:info@darwinist.io" class="btn btn-light btn-lg">Send Us an Email</a>
-        <a href="https://calendar.app.google/zAJns3ggaFJpdawy9" class="btn btn-primary btn-lg ms-3">Schedule a Meeting</a>
+        <p class="lead text-white fw-bold m-4">Discover how Darwinist can automate your clinical pathways for £1 per patient.</p>
+        <a href="mailto:info@darwinist.io" class="btn btn-light btn-lg">Email Us</a>
+        <a href="https://calendar.app.google/zAJns3ggaFJpdawy9" class="btn btn-primary btn-lg ms-3">Book a Demo</a>
         </div>
     </section>
 
@@ -117,13 +117,6 @@ layout: default
     </section>
     {% endif %}
 
-    <!-- CTA Section (if not already in hero) -->
-    {% if page.cta_text and page.cta_button and page.cta_link %}
-    <section class="container py-5 text-center">
-        <h3 class="mb-4">{{ page.cta_text }}</h3>
-        <a href="{{ page.cta_link }}" class="btn btn-primary btn-lg">{{ page.cta_button }}</a>
-    </section>
-    {% endif %}
 </div>
 
 <script>
