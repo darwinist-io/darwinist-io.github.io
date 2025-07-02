@@ -1,4 +1,5 @@
 ---
+layout: consulting
 consulting_services:
   title: "Healthcare Technology Consulting Services"
   subtitle: "Expert guidance for digital transformation in healthcare"

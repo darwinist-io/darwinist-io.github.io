@@ -1,0 +1,293 @@
+---
+layout: default
+title: Healthcare Technology Consulting Services
+description: "Expert guidance for digital transformation in healthcare"
+---
+
+<div class="container-fluid p-0">
+  <!-- Hero Section -->
+  <section class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-3">{{ page.consulting_services.title }}</h1>
+      <p class="lead">{{ page.consulting_services.subtitle }}</p>
+      <div class="row justify-content-center mt-4">
+        <div class="col-auto">
+          <span class="badge bg-warning text-dark fs-6 me-2">
+            <i class="fas fa-stethoscope me-1"></i>Healthcare Focus
+          </span>
+          <span class="badge bg-info fs-6">
+            <i class="fas fa-chart-line me-1"></i>Digital Transformation
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Categories Overview -->
+  <section class="container py-5">
+    <div class="row text-center mb-5">
+      <div class="col-12">
+        <h2 class="text-primary mb-4">Our Consulting Services</h2>
+        <p class="lead text-muted">Comprehensive healthcare technology consulting across all aspects of digital transformation</p>
+      </div>
+    </div>
+    
+    <div class="row g-4 mb-5">
+      {% for category_data in page.consulting_services.service_categories %}
+      {% assign category_key = category_data[0] %}
+      {% assign category = category_data[1] %}
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center p-4">
+            <i class="{{ category.icon }} fa-3x text-primary mb-3"></i>
+            <h5 class="card-title">{{ category.title }}</h5>
+            <p class="card-text text-muted">{{ category.description }}</p>
+            <span class="badge bg-primary">{{ category.services.size }} Services</span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Detailed Service Categories -->
+  {% for category_data in page.consulting_services.service_categories %}
+  {% assign category_key = category_data[0] %}
+  {% assign category = category_data[1] %}
+  {% assign loop_index = forloop.index %}
+  {% assign bg_class = '' %}
+  {% if loop_index == 2 or loop_index == 4 or loop_index == 6 %}
+    {% assign bg_class = 'bg-light' %}
+  {% endif %}
+  
+  <section class="container-fluid py-5 {{ bg_class }}">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <i class="{{ category.icon }} fa-3x text-primary mb-3"></i>
+          <h2 class="text-primary">{{ category.title }}</h2>
+          <p class="lead text-muted">{{ category.description }}</p>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        {% for service in category.services %}
+        <div class="col-lg-6">
+          <div class="card h-100 border-primary">
+            <div class="card-header bg-primary text-white">
+              <h5 class="card-title mb-0">{{ service.name }}</h5>
+            </div>
+            <div class="card-body">
+              <p class="card-text">{{ service.description }}</p>
+              
+              {% if service.focus_areas %}
+              <div class="mb-3">
+                <h6 class="text-primary">Focus Areas:</h6>
+                <ul class="list-unstyled">
+                  {% for area in service.focus_areas %}
+                  <li class="mb-1">
+                    <i class="fas fa-arrow-right text-primary me-2"></i>{{ area }}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+              {% endif %}
+              
+              {% if service.deliverables %}
+              <div class="mb-3">
+                <h6 class="text-primary">Key Deliverables:</h6>
+                <ul class="list-unstyled">
+                  {% for deliverable in service.deliverables %}
+                  <li class="mb-1">
+                    <i class="fas fa-check text-success me-2"></i>{{ deliverable }}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+              {% endif %}
+              
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="badge bg-secondary fs-6">{{ service.duration }}</span>
+                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#contactModal" data-service="{{ service.name }}">
+                  <i class="fas fa-envelope me-1"></i>Get Quote
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+
+  <!-- Engagement Models -->
+  <section class="container py-5">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h2 class="text-primary">Engagement Models</h2>
+        <p class="lead text-muted">Flexible engagement options to meet your specific needs</p>
+      </div>
+    </div>
+    
+    <div class="row g-4">
+      {% for model in page.consulting_services.engagement_models %}
+      <div class="col-lg-4">
+        <div class="card h-100 text-center">
+          <div class="card-body p-4">
+            <div class="mb-3">
+              {% if forloop.index == 1 %}
+                <i class="fas fa-search fa-3x text-info"></i>
+              {% elsif forloop.index == 2 %}
+                <i class="fas fa-handshake fa-3x text-success"></i>
+              {% else %}
+                <i class="fas fa-headset fa-3x text-warning"></i>
+              {% endif %}
+            </div>
+            <h5 class="card-title">{{ model.name }}</h5>
+            <p class="card-text">{{ model.description }}</p>
+            <div class="mt-3">
+              <span class="badge bg-primary fs-6">{{ model.duration }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Pricing Approach -->
+  <section class="container py-5 bg-light">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2 class="text-primary mb-4">{{ page.consulting_services.pricing_approach.title }}</h2>
+        <p class="lead mb-4">{{ page.consulting_services.pricing_approach.description }}</p>
+        
+        <div class="row g-3 mb-4">
+          {% for option in page.consulting_services.pricing_approach.options %}
+          <div class="col-md-4">
+            <div class="card border-primary">
+              <div class="card-body text-center">
+                {% if forloop.index == 1 %}
+                  <i class="fas fa-file-contract fa-2x text-primary mb-2"></i>
+                {% elsif forloop.index == 2 %}
+                  <i class="fas fa-calendar-alt fa-2x text-primary mb-2"></i>
+                {% else %}
+                  <i class="fas fa-target fa-2x text-primary mb-2"></i>
+                {% endif %}
+                <p class="card-text">{{ option }}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle me-2"></i>
+          {{ page.consulting_services.pricing_approach.note }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="container py-5">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2 class="text-primary mb-3">{{ page.consulting_services.contact.title }}</h2>
+        <p class="lead mb-4">{{ page.consulting_services.contact.subtitle }}</p>
+        
+        <div class="row g-3">
+          <div class="col-md-6">
+            <a href="mailto:{{ page.consulting_services.contact.email }}" class="btn btn-primary btn-lg w-100">
+              <i class="fas fa-envelope me-2"></i>Email Us
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a href="{{ page.consulting_services.contact.linkedin }}" target="_blank" class="btn btn-outline-primary btn-lg w-100">
+              <i class="fab fa-linkedin me-2"></i>LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Request Consultation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="consultingForm">
+          <div class="mb-3">
+            <label for="serviceName" class="form-label">Service Interest</label>
+            <input type="text" class="form-control" id="serviceName" readonly>
+          </div>
+          <div class="mb-3">
+            <label for="contactName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="contactName" required>
+          </div>
+          <div class="mb-3">
+            <label for="contactEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="contactEmail" required>
+          </div>
+          <div class="mb-3">
+            <label for="contactOrganization" class="form-label">Organization</label>
+            <input type="text" class="form-control" id="contactOrganization">
+          </div>
+          <div class="mb-3">
+            <label for="contactMessage" class="form-label">Message</label>
+            <textarea class="form-control" id="contactMessage" rows="3" placeholder="Tell us about your specific needs and timeline..."></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="submitConsultingForm()">Send Request</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Handle modal service population
+document.addEventListener('DOMContentLoaded', function() {
+  var contactModal = document.getElementById('contactModal');
+  contactModal.addEventListener('show.bs.modal', function (event) {
+    var button = event.relatedTarget;
+    var service = button.getAttribute('data-service');
+    var serviceInput = contactModal.querySelector('#serviceName');
+    serviceInput.value = service;
+  });
+});
+
+function submitConsultingForm() {
+  var form = document.getElementById('consultingForm');
+  var formData = new FormData(form);
+  var service = document.getElementById('serviceName').value;
+  var name = document.getElementById('contactName').value;
+  var email = document.getElementById('contactEmail').value;
+  var organization = document.getElementById('contactOrganization').value;
+  var message = document.getElementById('contactMessage').value;
+  
+  var subject = 'Consulting Request: ' + service;
+  var body = 'Name: ' + name + '\n' +
+             'Email: ' + email + '\n' +
+             'Organization: ' + organization + '\n' +
+             'Service: ' + service + '\n\n' +
+             'Message:\n' + message;
+  
+  var mailtoLink = 'mailto:{{ page.consulting_services.contact.email }}?subject=' + 
+                   encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  
+  window.location.href = mailtoLink;
+  
+  var modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
+  modal.hide();
+}
+</script>
