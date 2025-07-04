@@ -5,14 +5,14 @@ layout: default
   <!-- Hero Section -->
     <section class="text-white text-center d-flex align-items-center justify-content-center" style="background: url('{{ page.hero_image }}') center center/cover no-repeat; min-height: 60vh;">
         <div class="w-100" style="background: rgba(0,0,0,0.55); min-height: 30vh;">
-        <div class="container py-5">
-            <img src="{{ site.baseurl }}/assets/darwinist-logo-white.png" alt="Darwinist Logo" class="mb-4" style="max-width:15rem;">
-            <h1 class="display-4 fw-bold">{{ page.hero_tagline }}</h1>
-            <p class="lead text-white fw-bold m-4">{{ page.hero_subtext }}</p>
-            {% if page.cta_text and page.cta_button and page.cta_link %}
-            <a href="{{ page.cta_link }}" class="btn btn-primary btn-lg">{{ page.cta_button }}</a>
-            {% endif %}
-        </div>
+            <div class="container py-5">
+                <img src="{{ site.baseurl }}/assets/darwinist-logo-white.png" alt="Darwinist Logo" class="mb-4" style="max-width:15rem;">
+                <h1 class="display-4 fw-bold">{{ page.hero_tagline }}</h1>
+                <p class="lead text-white fw-bold m-4">{{ page.hero_subtext }}</p>
+                {% if page.cta_text and page.cta_button and page.cta_link %}
+                <a href="{{ page.cta_link }}" class="btn btn-primary btn-lg">{{ page.cta_button }}</a>
+                {% endif %}
+            </div>
         </div>
     </section>
 
@@ -70,7 +70,6 @@ layout: default
         
         
     <div class="row">
-          
         <div class="col-12 mb-4">
             <div class="card h-100 border-success shadow">
                 <div class="card-header bg-success text-white">

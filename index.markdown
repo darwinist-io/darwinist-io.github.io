@@ -3,7 +3,7 @@ layout: cover
 title: Darwinist
 hero_image: /assets/hospital-ward.jpg
 hero_tagline: "Empowering Healthcare with Seamless Technology"
-hero_subtext: "We integrate, distribute, and support world-class medical software for hospitals and clinics."
+hero_subtext: "We <span style='color: #6cc494'>develop</span>, <span style='color: #6cc494'>distribute</span>, and <span style='color: #6cc494'>support</span> world-class medical software for hospitals and clinics."
 cards_title: "Our Technologies"
 cards_widget:
   - title: DICOM Solutions
