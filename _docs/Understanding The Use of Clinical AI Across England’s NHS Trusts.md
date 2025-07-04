@@ -1,7 +1,7 @@
 ---
 layout: document
 title: "Understanding The Use of Clinical AI Across England’s NHS Trusts"
-subtitle: "A comprehensive analysis of clinical AI adoption across England’s NHS trusts, based on 120 FOI responses. Discusses adoption rates, leading vendors, governance, barriers to scale, and future directions for AI in UK healthcare."
+subtitle: "A comprehensive analysis of clinical AI adoption across England’s NHS trusts, based on 122 FOI responses. Discusses adoption rates, leading vendors, governance, barriers to scale, and future directions for AI in UK healthcare."
 date: 2025-06-10
 author: "Darwinist Team"
 tags: ["Clinical AI", "NHS", "Radiology AI", "Healthcare Technology", "FOI", "UK Health", "AI Adoption"]
@@ -9,18 +9,18 @@ category: "Medical AI Solutions"
 featured: true
 hidden: false
 toc: true
-excerpt: "A comprehensive analysis of clinical AI adoption across England’s NHS trusts, based on 120 FOI responses. Discusses adoption rates, leading vendors, governance, barriers to scale, and future directions for AI in UK healthcare."
+excerpt: "A comprehensive analysis of clinical AI adoption across England’s NHS trusts, based on 122 FOI responses. Discusses adoption rates, leading vendors, governance, barriers to scale, and future directions for AI in UK healthcare."
 ---
 
 ## **Executive Summary** {#executive-summary}
 
-This report examines the current state of adoption, procurement, and governance practices of clinical artificial intelligence in England’s NHS trusts as of late 2024, based on Freedom of Information (FOI) responses from 120 secondary care trusts.
+This report examines the current state of adoption, procurement, and governance practices of clinical artificial intelligence in England’s NHS trusts as of late 2024, based on Freedom of Information (FOI) responses from 122 secondary care trusts.
 
 There are broadly two types of AI in use clinically. Convolutional Neural Networks (CNNs) which power radiology and pathology imaging AI tools, and text based Large Language Models (LLMs). LLMs can be further subdivided into point-of-care ambient recording tools and summarisation tools. For this purpose of this report these three clinical AI use cases will be referred to as **Radiology AI**, **Ambient AI**, and **Summary AI**.
 
 Radiology AI was by far the most prevalent type of AI reported, with only a handful of trusts reporting usage of Ambient AI, and no mention at all of Summary AI.
 
-The responses reveal a 50% adoption rate. 36 different AI providers were cited, with neuroradiology and stroke support AI vendor [Brainomix](https://www.brainomix.com/) seeing the greatest penetration. Since the data was collected, some trusts have clarified their responses, and [Annalise](https://annalise.ai/) appears to have become the most widely adopted provider.
+The responses reveal a 50% adoption rate. 38 different AI providers were cited, with neuroradiology and stroke support AI vendor [Brainomix](https://www.brainomix.com/) seeing the greatest penetration. Since the data was collected, some trusts have clarified their responses, and [Annalise](https://annalise.ai/) appears to have become the most widely adopted provider.
 
 However, higher penetration does not equate to high usage, with adoption mostly limited to small scale pilot projects. Only around 1% of England’s medical images in 2024 were touched by AI tools. Higher usage volumes were observed in MSK support tools, and these represent a potential high growth use case, with AI’s ability to produce richer reporting being particularly important.  
 
@@ -34,21 +34,21 @@ It appears clear that AI will increasingly impact care over the coming years, bu
 
 On the 18th September 2024, Darwinist sent out FOI requests to 149 NHS trusts. Trusts were asked for details regarding any AI tools that were currently being used for diagnosis or treatment of patients within the trust. Additionally, details on the usage frequency, and copies of any policies, procedures or committee notes regarding selection and implementation were requested. 
 
-Trusts were chosen because of the presence of radiology capabilities, as this was Darwinist’s focus at the time. Ambulance and mental health trusts were not contacted. 120 trusts responded to the FOI request, and 29 either did not respond at all, or declined to respond citing the Section 31 (1) FOI exemption regarding cyber security concerns. 
+Trusts were chosen because of the presence of radiology capabilities, as this was Darwinist’s focus at the time. Ambulance and mental health trusts were not contacted. 122 trusts responded to the FOI request, and 27 either did not respond at all, or declined to respond citing the Section 31 (1) FOI exemption regarding cyber security concerns. 
 
-Perhaps as was to be expected given the independent nature of trusts, there was significant variation in adoption across the country. Responses were split exactly down the middle, with 60 trusts reporting AI use, and 60 trusts saying they were not. Each of the 12 community trusts that were contacted confirmed that they had not implemented any form of clinical AI. 
+Perhaps as was to be expected given the independent nature of trusts, there was significant variation in adoption across the country. Responses were split exactly down the middle, with 61 trusts reporting AI use, and 61 trusts saying they were not. Each of the 12 community trusts that were contacted confirmed that they had not implemented any form of clinical AI. 
 
-The responses present a clear picture of the main providers of radiology AI products to trusts and their levels of penetration. There were a total of 36 different vendors reported, with the vast majority being Radiology AI solutions for diagnostic imaging. In general, usage numbers for the applications were relatively low, even for those with greater numbers of installations. 
+The responses present a clear picture of the main providers of radiology AI products to trusts and their levels of penetration. There were a total of 38 different vendors reported, with the vast majority being Radiology AI solutions for diagnostic imaging. In general, usage numbers for the applications were relatively low, even for those with greater numbers of installations. 
 
-* Stroke Detection \- [Brainomix](https://www.brainomix.com/) (16 trusts) and [RapidAI](https://www.rapidai.com/) (12 trusts) are widely used for acute stroke diagnosis and care.
+* Stroke Detection \- [Brainomix](https://www.brainomix.com/) (16 trusts) and [RapidAI](https://www.rapidai.com/) (13 trusts) are widely used for acute stroke diagnosis and care.
 
-* Chest Imaging \- [Annalise](https://annalise.ai/) (11 trusts), [Aidence Veye](https://www.aidence.com/veye-lung-nodules/) (8 trusts) [Behold AI Red Dot](https://www.behold.ai/our-solutions/red-dot-ct-head/)**\*** (5 trusts) are used for triaging chest CTs and x-rays. 
+* Chest Imaging \- [Annalise](https://annalise.ai/) (11 trusts), [Aidence Veye](https://www.aidence.com/veye-lung-nodules/) (9 trusts) [Behold AI Red Dot](https://www.behold.ai/our-solutions/red-dot-ct-head/)**\*** (5 trusts) are used for triaging chest CTs and x-rays. 
 
   ***\***In January 2025, Behold AI went into [administration](https://www.digitalhealth.net/2025/01/digital-health-startup-behold-ai-enters-administration/).*
 
-* Cardiovascular Imaging \- [HeartFlow](https://www.heartflow.com/) (10 trusts) and [Circle CVI](https://www.circlecvi.com/) (2 trusts) are used for cardiac image analysis.
+* Cardiovascular Imaging \- [HeartFlow](https://www.heartflow.com/) (11 trusts) and [Circle CVI](https://www.circlecvi.com/) (2 trusts) are used for cardiac image analysis.
 
-* Fracture Detection and Bone Age \- Systems such as [Gleamer BoneView](https://www.gleamer.ai/solutions/boneview) (4 trusts), [Radiobotics RBfracture](https://radiobotics.com/solutions/rbfracture/) (2 trusts), and [BoneXpert](https://bonexpert.com/) (2 trusts) appear in orthopaedic workflows. 
+* Fracture Detection and Bone Age \- Systems such as [Gleamer BoneView](https://www.gleamer.ai/solutions/boneview) (4 trusts), [Radiobotics RBfracture](https://radiobotics.com/solutions/rbfracture/) (2 trusts), and [BoneXpert](https://bonexpert.com/) (3 trusts) appear in orthopaedic workflows. 
 
 * Dermatology \- [Skin Analytics DERM](https://skin-analytics.com/) (8 trusts) is being used in teledermatology triage.. 
 
@@ -351,6 +351,10 @@ Below is a list of the responses provided by the NHS Trusts. The level of detail
 * **University Hospitals Of Leicester NHS Trust**  
   Confirmed that they are using clinical AI, but refused to list providers, invoking a Section 31 FOI exemption.
 
+* **University Hospitals of North Midlands NHS Trust**
+<br>
+  Uses MVision for all radical radiotherapy patients, and participated in a Kheiron MIA breast screening evaluation.  HeartFlow used 15 times a month, and FeOPS once in last 12 months. Also uses Aidence, BoneXpert, Mobius, and RapidAI. Governed under NHS DCB0129/DCB0160 standards.
+
 * **University Hospitals Sussex NHS Foundation Trust**  
   Uses Brainomix, Kheiron MIA, HeartFlow, and also indicated an AI enhanced patch for arrhythmias.
 
@@ -392,7 +396,8 @@ Below is a list of the responses provided by the NHS Trusts. The level of detail
 * **Cambridgeshire Community Services NHS Trust**  
 * **Central London Community Healthcare NHS Trust**  
 * **Croydon Health Services NHS Trust**  
-* **Derbyshire Community Health Services NHS Foundation Trust**  
+* **Derbyshire Community Health Services NHS Foundation Trust** 
+* **East Lancashire Hospitals NHS Trust** (Trialling Clearnote AVT ambient AI for non-clinical use) 
 * **George Eliot Hospital NHS Trust**  
 * **Gloucestershire Health and Care NHS Foundation Trust**  
 * **Hertfordshire Community NHS Trust**  
@@ -452,8 +457,7 @@ Below is a list of the responses provided by the NHS Trusts. The level of detail
 * **County Durham and Darlington NHS Foundation Trust**  
 * **Dartford and Gravesham NHS Trust**  
 * **East Cheshire NHS Trust**  
-* **East Kent Hospitals University NHS Foundation Trust**  
-* **East Lancashire Hospitals NHS Trust**  
+* **East Kent Hospitals University NHS Foundation Trust**   
 * **Imperial College Healthcare NHS Trust**  
 * **Maidstone and Tunbridge Wells NHS Trust**  
 * **Liverpool University Hospitals NHS Foundation Trust**  
@@ -470,8 +474,7 @@ Below is a list of the responses provided by the NHS Trusts. The level of detail
 * **Torbay and South Devon NHS Foundation Trust**  
 * **United Lincolnshire Hospitals NHS Trust**  
 * **University College London Hospitals NHS Foundation Trust**  
-* **University Hospitals Birmingham NHS Foundation Trust**  
-* **University Hospitals of North Midlands NHS Trust**  
+* **University Hospitals Birmingham NHS Foundation Trust**   
 * **University Hospital Southampton NHS Foundation Trust**
 
 ---
