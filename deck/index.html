@@ -1,0 +1,709 @@
+---
+layout: default
+title: "Darwinist Pitch Deck"
+description: "Modernising clinical pathway development and empowering healthcare providers to build AI tools"
+---
+
+{% assign deck_data = site.pages | where: "name", "deck.markdown" | first %}
+
+<div class="container-fluid p-0">
+  <!-- Hero Section with Clear Value Proposition -->
+  <section class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-3 fw-bold mb-3">{{ deck_data.title }}</h1>
+      <p class="lead fs-4 mb-4">{{ deck_data.description }}</p>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <span class="badge bg-success fs-6 px-3 py-2">
+              <i class="fas fa-chart-line me-2"></i>£750K ARR Target
+            </span>
+            <span class="badge bg-warning text-dark fs-6 px-3 py-2">
+              <i class="fas fa-users me-2"></i>15+ Customers
+            </span>
+            <span class="badge bg-info fs-6 px-3 py-2">
+              <i class="fas fa-clock me-2"></i>18 Month Timeline
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation for Deck Sections -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" aria-label="Pitch deck navigation">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#deckNavigation" 
+              aria-controls="deckNavigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="deckNavigation">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#company-purpose">Purpose</a></li>
+          <li class="nav-item"><a class="nav-link" href="#the-problem">Problem</a></li>
+          <li class="nav-item"><a class="nav-link" href="#the-solution">Solution</a></li>
+          <li class="nav-item"><a class="nav-link" href="#why-now">Why Now</a></li>
+          <li class="nav-item"><a class="nav-link" href="#business-model">Business</a></li>
+          <li class="nav-item"><a class="nav-link" href="#market-potential">Market</a></li>
+          <li class="nav-item"><a class="nav-link" href="#the-competition">Competition</a></li>
+          <li class="nav-item"><a class="nav-link" href="#traction">Traction</a></li>
+          <li class="nav-item"><a class="nav-link" href="#the-team">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="#the-ask">The Ask</a></li>
+          <li class="nav-item"><a class="nav-link" href="#our-vision">Vision</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Deck Slides -->
+  {% for slide in deck_data.deck %}
+  <section id="{{ slide.title | downcase | replace: ' ', '-' | replace: '&', 'and' }}" class="py-5 {% cycle 'bg-white', 'bg-light' %}">
+    <div class="container">
+      <!-- Slide Header -->
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <div class="d-inline-flex align-items-center justify-content-center bg-{{ slide.colour }} text-white rounded-circle mb-3" 
+               style="width: 80px; height: 80px;">
+            <i class="{{ slide.icon }} fa-2x" aria-hidden="true"></i>
+          </div>
+          <h2 class="display-5 fw-bold text-{{ slide.colour }} mb-2">{{ slide.title }}</h2>
+          {% if slide.subtitle %}
+          <p class="lead text-muted">{{ slide.subtitle }}</p>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Slide Content -->
+      <div class="row g-4">
+        
+        <!-- Company Purpose Slide -->
+        {% if slide.title == "Company Purpose" %}
+        <div class="col-lg-8">
+          <div class="row g-3">
+            {% for item in slide.items %}
+            <div class="col-12">
+              <div class="card border-{{ slide.colour }} h-100">
+                <div class="card-body">
+                  <h5 class="card-title text-{{ slide.colour }}">{{ item.text }}</h5>
+                  <p class="card-text">{{ item.detail }}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card bg-{{ slide.colour }} text-white">
+            <div class="card-header">
+              <h5 class="mb-0"><i class="fas fa-chart-bar me-2"></i>Key Metrics</h5>
+            </div>
+            <div class="card-body">
+              {% for metric in slide.metrics %}
+              <div class="text-center mb-3">
+                <div class="display-4 fw-bold">{{ metric.value }}</div>
+                <div class="small">{{ metric.label }}</div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <!-- The Problem Slide -->
+        {% elsif slide.title == "The Problem" %}
+        <div class="col-lg-8">
+          {% for item in slide.items %}
+          <div class="alert alert-{{ slide.colour }} mb-3" role="alert">
+            <h5 class="alert-heading">{{ item.text }}</h5>
+            <p class="mb-1">{{ item.detail }}</p>
+            {% if item.source %}
+            <hr>
+            <p class="mb-0 small"><strong>Source:</strong> {{ item.source }}</p>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+        <div class="col-lg-4">
+          <div class="card border-{{ slide.colour }}">
+            <div class="card-header bg-{{ slide.colour }} text-white">
+              <h5 class="mb-0">Pain Points</h5>
+            </div>
+            <div class="card-body">
+              {% for pain_point in slide.pain_points %}
+              <div class="text-center mb-3 p-2 border rounded">
+                <i class="{{ pain_point.icon }} fa-2x text-{{ slide.colour }} mb-2"></i>
+                <div class="h4 fw-bold text-{{ slide.colour }}">{{ pain_point.stat }}</div>
+                <div class="small text-muted">{{ pain_point.description }}</div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <!-- The Solution Slide -->
+        {% elsif slide.title == "The Solution" %}
+        <div class="col-12">
+          <div class="row g-4">
+            {% for item in slide.items %}
+            <div class="col-lg-4">
+              <div class="card border-{{ slide.colour }} h-100">
+                <div class="card-body text-center">
+                  <i class="fas fa-lightbulb fa-3x text-{{ slide.colour }} mb-3"></i>
+                  <h5 class="card-title">{{ item.text }}</h5>
+                  <p class="card-text">{{ item.detail }}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% if slide.differentiators %}
+        <div class="col-12">
+          <div class="card bg-light">
+            <div class="card-header">
+              <h5 class="mb-0"><i class="fas fa-star me-2"></i>Key Differentiators</h5>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                {% for diff in slide.differentiators %}
+                <div class="col-md-6 mb-3">
+                  <div class="p-3 border rounded">
+                    <h6 class="text-{{ slide.colour }}">{{ diff.title }}</h6>
+                    <p class="mb-0 small">{{ diff.description }}</p>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Why Now Slide -->
+        {% elsif slide.title == "Why Now?" %}
+        <div class="col-lg-8">
+          {% for item in slide.items %}
+          <div class="card mb-3 border-{{ slide.colour }}">
+            <div class="card-body">
+              <h5 class="card-title text-{{ slide.colour }}">{{ item.text }}</h5>
+              <p class="card-text">{{ item.detail }}</p>
+              {% if item.source %}
+              <p class="small text-muted mb-0"><strong>Source:</strong> {{ item.source }}</p>
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="col-lg-4">
+          {% if slide.market_drivers %}
+          <div class="card">
+            <div class="card-header bg-{{ slide.colour }} text-white">
+              <h5 class="mb-0">Market Drivers</h5>
+            </div>
+            <div class="card-body">
+              {% for driver in slide.market_drivers %}
+              <div class="mb-3">
+                <h6 class="text-{{ slide.colour }}">{{ driver.driver }}</h6>
+                <p class="small text-muted mb-0">{{ driver.description }}</p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+
+        <!-- Market Potential Slide -->
+        {% elsif slide.title == "Market Potential" %}
+        <div class="col-lg-6">
+          {% for item in slide.items %}
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title text-{{ slide.colour }}">{{ item.text }}</h5>
+              <p class="card-text">{{ item.detail }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="col-lg-6">
+          {% if slide.market_breakdown %}
+          <div class="card">
+            <div class="card-header bg-{{ slide.colour }} text-white">
+              <h5 class="mb-0">UK Market Breakdown</h5>
+            </div>
+            <div class="card-body">
+              <div class="text-center mb-3">
+                <div class="display-5 fw-bold text-{{ slide.colour }}">{{ slide.market_breakdown.uk.tam }}</div>
+                <div class="text-muted">Total Addressable Market</div>
+              </div>
+              {% for segment in slide.market_breakdown.uk.segments %}
+              <div class="d-flex justify-content-between mb-2">
+                <span>{{ segment.name }}</span>
+                <strong class="text-{{ slide.colour }}">{{ segment.revenue }}</strong>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+
+        <!-- Business Model Slide -->
+        {% elsif slide.title == "Business Model" %}
+        <div class="col-lg-8">
+          {% for item in slide.items %}
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title text-{{ slide.colour }}">{{ item.text }}</h5>
+              <p class="card-text">{{ item.detail }}</p>
+            </div>
+          </div>
+          {% endfor %}
+          
+          {% if slide.pricing_structure %}
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">Pricing Structure</h5>
+            </div>
+            <div class="card-body">
+              {% for module in slide.pricing_structure %}
+              <div class="row align-items-center mb-3 p-2 border rounded">
+                <div class="col-sm-3">
+                  <div class="text-center">
+                    <div class="h4 text-{{ slide.colour }} mb-0">{{ module.price }}</div>
+                    <small class="text-muted">per patient/year</small>
+                  </div>
+                </div>
+                <div class="col-sm-9">
+                  <h6 class="mb-1">{{ module.module }}</h6>
+                  <p class="mb-0 small text-muted">{{ module.description }}</p>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+        <div class="col-lg-4">
+          {% if slide.revenue_model %}
+          <div class="card">
+            <div class="card-header bg-{{ slide.colour }} text-white">
+              <h5 class="mb-0">Revenue Streams</h5>
+            </div>
+            <div class="card-body">
+              {% for stream in slide.revenue_model %}
+              <div class="mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="fw-bold">{{ stream.stream }}</span>
+                  <span class="badge bg-{{ slide.colour }}">{{ stream.percentage }}</span>
+                </div>
+                <p class="small text-muted mb-0">{{ stream.description }}</p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+
+        <!-- The Competition Slide -->
+        {% elsif slide.title == "The Competition" %}
+        <div class="col-lg-8">
+          {% for item in slide.items %}
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title text-{{ slide.colour }}">{{ item.text }}</h5>
+              <p class="card-text">{{ item.detail }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="col-lg-4">
+          {% if slide.competitive_advantages %}
+          <div class="card">
+            <div class="card-header bg-{{ slide.colour }} text-white">
+              <h5 class="mb-0">Our Advantages</h5>
+            </div>
+            <div class="card-body">
+              {% for advantage in slide.competitive_advantages %}
+              <div class="d-flex align-items-center mb-2">
+                <i class="fas fa-check-circle text-{{ slide.colour }} me-2"></i>
+                <span class="small">{{ advantage.advantage }}</span>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+
+        <!-- Traction Slide -->
+        {% elsif slide.title == "Traction" %}
+        <div class="col-lg-8">
+          {% for item in slide.items %}
+          <div class="alert alert-success" role="alert">
+            <h5 class="alert-heading">{{ item.text }}</h5>
+            <p class="mb-0">{{ item.detail }}</p>
+          </div>
+          {% endfor %}
+          
+          {% if slide.milestones %}
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">Key Milestones</h5>
+            </div>
+            <div class="card-body">
+              {% for milestone in slide.milestones %}
+              <div class="row align-items-center mb-3">
+                <div class="col-sm-3">
+                  <span class="badge bg-{{ slide.colour }} fs-6">{{ milestone.date }}</span>
+                </div>
+                <div class="col-sm-9">
+                  <h6 class="mb-1">{{ milestone.achievement }}</h6>
+                  <p class="mb-0 small text-muted">{{ milestone.impact }}</p>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+        <div class="col-lg-4">
+          {% if slide.customer_metrics %}
+          <div class="card">
+            <div class="card-header bg-{{ slide.colour }} text-white">
+              <h5 class="mb-0">Customer Metrics</h5>
+            </div>
+            <div class="card-body text-center">
+              <div class="mb-3">
+                <div class="display-6 fw-bold">{{ slide.customer_metrics.current_clients }}</div>
+                <div class="small">Current Clients</div>
+              </div>
+              <div class="mb-3">
+                <div class="display-6 fw-bold">{{ slide.customer_metrics.arr }}</div>
+                <div class="small">Annual Recurring Revenue</div>
+              </div>
+              <div class="mb-3">
+                <div class="display-6 fw-bold">{{ slide.customer_metrics.retention_rate }}</div>
+                <div class="small">Customer Retention</div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+
+        <!-- The Team Slide -->
+        {% elsif slide.title == "The Team" %}
+        <div class="col-lg-8">
+          {% for item in slide.items %}
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title text-{{ slide.colour }}">{{ item.text }}</h5>
+              <p class="card-text">{{ item.detail }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="col-lg-4">
+          {% if slide.team_strengths %}
+          <div class="card">
+            <div class="card-header bg-{{ slide.colour }} text-white">
+              <h5 class="mb-0">Team Strengths</h5>
+            </div>
+            <div class="card-body">
+              {% for strength in slide.team_strengths %}
+              <div class="d-flex align-items-center mb-2">
+                <i class="fas fa-star text-{{ slide.colour }} me-2"></i>
+                <span class="small">{{ strength }}</span>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+
+        <!-- The Ask Slide -->
+        {% elsif slide.title == "The Ask" %}
+        <div class="col-lg-8">
+          {% for item in slide.items %}
+          <div class="card mb-3 border-{{ slide.colour }}">
+            <div class="card-body">
+              <h5 class="card-title text-{{ slide.colour }}">{{ item.text }}</h5>
+              <p class="card-text">{{ item.detail }}</p>
+            </div>
+          </div>
+          {% endfor %}
+          
+          {% if slide.funding_breakdown %}
+          <div class="card">
+            <div class="card-header bg-{{ slide.colour }} text-white">
+              <h5 class="mb-0">Funding Allocation - {{ slide.funding_breakdown.total }}</h5>
+            </div>
+            <div class="card-body">
+              {% for allocation in slide.funding_breakdown.allocation %}
+              <div class="row align-items-center mb-3">
+                <div class="col-sm-3">
+                  <div class="text-center">
+                    <div class="h5 text-{{ slide.colour }}">{{ allocation.amount }}</div>
+                    <span class="badge bg-{{ slide.colour }}">{{ allocation.percentage }}</span>
+                  </div>
+                </div>
+                <div class="col-sm-9">
+                  <h6 class="mb-1">{{ allocation.category }}</h6>
+                  <p class="mb-0 small text-muted">{{ allocation.description }}</p>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+        <div class="col-lg-4">
+          {% if slide.projected_outcomes %}
+          <div class="card bg-{{ slide.colour }} text-white">
+            <div class="card-header">
+              <h5 class="mb-0">Projected Outcomes</h5>
+            </div>
+            <div class="card-body text-center">
+              <div class="mb-3">
+                <div class="display-6 fw-bold">{{ slide.projected_outcomes.arr_target }}</div>
+                <div class="small">ARR Target</div>
+              </div>
+              <div class="mb-3">
+                <div class="display-6 fw-bold">{{ slide.projected_outcomes.customer_target }}</div>
+                <div class="small">Customer Target</div>
+              </div>
+              <div class="mb-3">
+                <div class="display-6 fw-bold">{{ slide.projected_outcomes.roi_multiple }}</div>
+                <div class="small">ROI Multiple</div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+
+        <!-- Our Vision Slide -->
+        {% elsif slide.title == "Our Vision" %}
+        <div class="col-lg-8">
+          {% for item in slide.items %}
+          <div class="card mb-3 border-{{ slide.colour }}">
+            <div class="card-body">
+              <h5 class="card-title text-{{ slide.colour }}">{{ item.text }}</h5>
+              <p class="card-text">{{ item.detail }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="col-lg-4">
+          {% if slide.impact_metrics %}
+          <div class="card bg-{{ slide.colour }} text-white">
+            <div class="card-header">
+              <h5 class="mb-0">5-Year Impact Goals</h5>
+            </div>
+            <div class="card-body">
+              {% for metric in slide.impact_metrics %}
+              <div class="d-flex align-items-center mb-2">
+                <i class="fas fa-check-circle me-2"></i>
+                <span class="small">{{ metric }}</span>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+
+        <!-- Default slide layout for other slides -->
+        {% else %}
+        <div class="col-12">
+          <div class="row g-3">
+            {% for item in slide.items %}
+            <div class="col-lg-4">
+              <div class="card border-{{ slide.colour }} h-100">
+                <div class="card-body">
+                  <h5 class="card-title text-{{ slide.colour }}">{{ item.text }}</h5>
+                  {% if item.detail %}
+                  <p class="card-text">{{ item.detail }}</p>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+
+  <!-- Contact Section -->
+  <section class="bg-primary text-white py-5">
+    <div class="container text-center">
+      <h2 class="display-5 fw-bold mb-4">Ready to Transform Healthcare?</h2>
+      <p class="lead mb-4">Let's discuss how Darwinist can help modernize your healthcare technology infrastructure.</p>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="p-3">
+                <i class="fas fa-envelope fa-2x mb-2"></i>
+                <div><a href="mailto:info@darwinist.io" class="text-white text-decoration-none">info@darwinist.io</a></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-3">
+                <i class="fas fa-phone fa-2x mb-2"></i>
+                <div><a href="tel:+442038906380" class="text-white text-decoration-none">+44 (0) 20 3890 6380</a></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-3">
+                <i class="fas fa-globe fa-2x mb-2"></i>
+                <div><a href="https://darwinist.io" class="text-white text-decoration-none">darwinist.io</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-4">
+        <a href="mailto:info@darwinist.io" class="btn btn-warning btn-lg px-4 py-2">
+          <i class="fas fa-calendar-plus me-2"></i>Schedule a Demo
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Custom CSS for accessibility and usability -->
+<style>
+/* Focus indicators for keyboard navigation */
+.nav-link:focus,
+.btn:focus,
+a:focus {
+  outline: 3px solid #ffc107;
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure minimum touch target sizes (44px) */
+.btn,
+.nav-link {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* High contrast for better readability */
+.text-muted {
+  color: #6c757d !important;
+}
+
+/* Loading state indicators */
+.card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .display-3 {
+    font-size: 2.5rem;
+  }
+  
+  .display-5 {
+    font-size: 2rem;
+  }
+  
+  .display-6 {
+    font-size: 1.5rem;
+  }
+  
+  .navbar-collapse {
+    text-align: center;
+  }
+}
+
+/* Print styles for offline viewing */
+@media print {
+  .navbar {
+    display: none;
+  }
+  
+  section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  
+  .card {
+    border: 1px solid #000 !important;
+    break-inside: avoid;
+  }
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+
+<!-- JavaScript for enhanced accessibility -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Add skip to content link
+  const skipLink = document.createElement('a');
+  skipLink.href = '#company-purpose';
+  skipLink.className = 'sr-only sr-only-focusable btn btn-primary position-absolute';
+  skipLink.style.top = '10px';
+  skipLink.style.left = '10px';
+  skipLink.style.zIndex = '9999';
+  skipLink.textContent = 'Skip to main content';
+  document.body.insertBefore(skipLink, document.body.firstChild);
+  
+  // Enhance focus management for navigation
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+        targetElement.focus();
+      }
+    });
+  });
+  
+  // Add aria-current to active navigation items
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach(link => {
+          link.removeAttribute('aria-current');
+          if (link.getAttribute('href') === '#' + id) {
+            link.setAttribute('aria-current', 'page');
+          }
+        });
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  // Observe all sections
+  document.querySelectorAll('section[id]').forEach(section => {
+    observer.observe(section);
+  });
+});
+</script>
