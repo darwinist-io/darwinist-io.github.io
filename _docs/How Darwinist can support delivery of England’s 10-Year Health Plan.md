@@ -12,9 +12,7 @@ hidden: false
 excerpt: "Darwinist's pathway-centric platform directly supports England's 10-Year Health Plan radical shifts from hospital to community, analogue to digital, and sickness to prevention, offering ICBs practical tools for immediate deployment."
 ---
 
-[England's 10-Year Health Plan](https://www.gov.uk/government/publications/10-year-health-plan-for-england-fit-for-the-future/fit-for-the-future-10-year-health-plan-for-england-executive-summary)
-
-The Government’s new 10-Year Health Plan sets a bold direction: shift care from hospital to community, from analogue to digital, and from sickness to prevention. Darwinist’s pathway-centric platform maps neatly onto each of those three “radical shifts”, giving Integrated Care Boards (ICBs) and provider trusts practical tools they can deploy now.
+[The Government’s new 10-Year Health Plan](https://www.gov.uk/government/publications/10-year-health-plan-for-england-fit-for-the-future/fit-for-the-future-10-year-health-plan-for-england-executive-summary) sets a bold direction: shift care from hospital to community, from analogue to digital, and from sickness to prevention. Darwinist’s pathway-centric platform maps neatly onto each of those three “radical shifts”, giving Integrated Care Boards (ICBs) and provider trusts practical tools they can deploy now.
 
 ### Hospital → Community
 
