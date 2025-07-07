@@ -1,0 +1,491 @@
+---
+layout: default
+title: UK EHR Market Analysis
+description: "Comprehensive market analysis of Electronic Health Record vendors serving the UK NHS"
+---
+
+{% assign vendor_data = site.pages | where: "name", "ehr_vendors.markdown" | first %}
+
+<div class="container py-4">
+  <!-- Market Overview Header -->
+  <div class="row mb-5">
+    <div class="col-lg-8">
+      <h1 class="display-5 fw-bold text-primary mb-3">UK EHR Market Analysis</h1>
+      <p class="lead text-muted">
+        Comprehensive intelligence on Electronic Health Record vendors serving the UK NHS market. 
+        Analysis based on procurement data, market footprint, and clinical deployment evidence.
+      </p>
+    </div>
+    <div class="col-lg-4">
+      <div class="card bg-primary text-white">
+        <div class="card-body text-center">
+          <div class="display-6 fw-bold">{{ vendor_data.vendors_expose | size }}</div>
+          <div class="small">Active EHR Vendors</div>
+          <div class="small opacity-75">Serving UK NHS Market</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Market Segmentation Analysis -->
+  <div class="card mb-5">
+    <div class="card-header bg-light">
+      <h2 class="h4 mb-0">
+        <i class="fas fa-chart-pie me-2 text-primary"></i>Market Segmentation by Care Setting
+      </h2>
+    </div>
+    <div class="card-body">
+      <div class="row g-4">
+        {% assign primary_vendors = vendor_data.vendors_expose | where_exp: "vendor", "vendor.segments contains 'Primary'" %}
+        {% assign acute_vendors = vendor_data.vendors_expose | where_exp: "vendor", "vendor.segments contains 'Acute'" %}
+        {% assign mh_vendors = vendor_data.vendors_expose | where_exp: "vendor", "vendor.segments contains 'Mental Health'" %}
+        
+        <!-- Primary Care Market -->
+        <div class="col-md-4">
+          <div class="border border-success rounded p-4 text-center h-100">
+            <div class="display-1 text-success">{{ primary_vendors | size }}</div>
+            <h5 class="text-success mb-3">Primary Care Vendors</h5>
+            {% assign primary_footprint = 0 %}
+            {% for vendor in primary_vendors %}
+              {% assign primary_footprint = primary_footprint | plus: vendor.footprint_patients %}
+            {% endfor %}
+            <div class="mb-3">
+              <strong>Combined Patient Footprint:</strong><br>
+              <span class="h4 text-success">{{ primary_footprint | divided_by: 1000000.0 | round: 1 }}M patients</span>
+            </div>
+            <div class="small text-muted">
+              Dominated by <strong>{{ primary_vendors.first.vendor }}</strong> 
+              ({{ primary_vendors.first.footprint_patients | divided_by: 1000000.0 | round: 1 }}M patients)
+            </div>
+          </div>
+        </div>
+
+        <!-- Acute Care Market -->
+        <div class="col-md-4">
+          <div class="border border-info rounded p-4 text-center h-100">
+            <div class="display-1 text-info">{{ acute_vendors | size }}</div>
+            <h5 class="text-info mb-3">Acute Care Vendors</h5>
+            {% assign acute_footprint = 0 %}
+            {% for vendor in acute_vendors %}
+              {% assign acute_footprint = acute_footprint | plus: vendor.footprint_patients %}
+            {% endfor %}
+            <div class="mb-3">
+              <strong>Combined Patient Footprint:</strong><br>
+              <span class="h4 text-info">{{ acute_footprint | divided_by: 1000000.0 | round: 1 }}M patients</span>
+            </div>
+            <div class="small text-muted">
+              Highly fragmented market with multiple competing platforms
+            </div>
+          </div>
+        </div>
+
+        <!-- Mental Health Market -->
+        <div class="col-md-4">
+          <div class="border border-warning rounded p-4 text-center h-100">
+            <div class="display-1 text-warning">{{ mh_vendors | size }}</div>
+            <h5 class="text-warning mb-3">Mental Health Vendors</h5>
+            {% assign mh_footprint = 0 %}
+            {% for vendor in mh_vendors %}
+              {% assign mh_footprint = mh_footprint | plus: vendor.footprint_patients %}
+            {% endfor %}
+            <div class="mb-3">
+              <strong>Combined Patient Footprint:</strong><br>
+              <span class="h4 text-warning">{{ mh_footprint | divided_by: 1000000.0 | round: 1 }}M patients</span>
+            </div>
+            <div class="small text-muted">
+              Specialist segment with cross-sector platforms
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Market Leaders Analysis -->
+  <div class="card mb-5">
+    <div class="card-header bg-light">
+      <h2 class="h4 mb-0">
+        <i class="fas fa-trophy me-2 text-primary"></i>Market Leaders by Patient Footprint
+      </h2>
+    </div>
+    <div class="card-body">
+      {% assign sorted_vendors = vendor_data.vendors_expose | sort: "footprint_patients" | reverse %}
+      <div class="row g-3">
+        {% for vendor in sorted_vendors limit: 5 %}
+        <div class="col-md-6 col-lg-4">
+          <div class="card border-0 bg-light h-100">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h6 class="card-title text-primary mb-0">{{ vendor.vendor }}</h6>
+                <span class="badge bg-primary">#{{ forloop.index }}</span>
+              </div>
+              <div class="h4 text-success mb-2">{{ vendor.footprint_patients | divided_by: 1000000.0 | round: 1 }}M</div>
+              <div class="small text-muted mb-2">{{ vendor.product }}</div>
+              <div>
+                {% for segment in vendor.segments %}
+                <span class="badge bg-secondary me-1">{{ segment }}</span>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Contract Value Analysis -->
+  <div class="card mb-5">
+    <div class="card-header bg-light">
+      <h2 class="h4 mb-0">
+        <i class="fas fa-pound-sign me-2 text-primary"></i>Major Contract Awards (2020-2025)
+      </h2>
+    </div>
+    <div class="card-body">
+      <div class="alert alert-info mb-4">
+        <i class="fas fa-info-circle me-2"></i>
+        <strong>Data Source:</strong> Public procurement records, Contracts Finder, and vendor disclosures. 
+        Some contract values are estimated or redacted in public notices.
+      </div>
+      
+      {% assign major_contracts = "" | split: "" %}
+      {% for deal_vendor in vendor_data.deal_information %}
+        {% for contract in deal_vendor.cost_evidence %}
+          {% if contract.cost != "unknown" and contract.cost > 10000000 %}
+            {% assign contract_with_vendor = contract | assign: "vendor_name", deal_vendor.vendor %}
+            {% assign major_contracts = major_contracts | push: contract_with_vendor %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+      
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead class="table-dark">
+            <tr>
+              <th>Vendor</th>
+              <th>Customer</th>
+              <th>Contract Value</th>
+              <th>Award Date</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for contract in major_contracts limit: 10 %}
+            <tr>
+              <td><strong>{{ contract.vendor_name | default: "Unknown" }}</strong></td>
+              <td>{{ contract.provider | truncate: 40 }}</td>
+              <td>
+                {% if contract.cost < 0 %}
+                <span class="text-success">Savings: £{{ contract.cost | abs | number_with_delimiter }}</span>
+                {% else %}
+                <span class="text-primary fw-bold">£{{ contract.cost | number_with_delimiter }}</span>
+                {% endif %}
+              </td>
+              <td>
+                {% if contract.start %}
+                {{ contract.start | date: "%b %Y" }}
+                {% else %}
+                <span class="text-muted">Not disclosed</span>
+                {% endif %}
+              </td>
+              <td>
+                {% if contract.end and contract.start %}
+                {% assign start_date = contract.start | date: "%s" %}
+                {% assign end_date = contract.end | date: "%s" %}
+                {% assign duration_seconds = end_date | minus: start_date %}
+                {% assign duration_years = duration_seconds | divided_by: 31536000 %}
+                {{ duration_years }} years
+                {% else %}
+                <span class="text-muted">Variable</span>
+                {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Market Risk Assessment -->
+  <div class="card mb-5">
+    <div class="card-header bg-light">
+      <h2 class="h4 mb-0">
+        <i class="fas fa-exclamation-triangle me-2 text-warning"></i>Market Risk Assessment
+      </h2>
+    </div>
+    <div class="card-body">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="border border-danger rounded p-3">
+            <h5 class="text-danger mb-3">High Risk Factors</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="fas fa-exclamation-circle text-danger me-2"></i>
+                <strong>Vendor Concentration:</strong> EMIS dominates primary care with 42M patient records
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-exclamation-circle text-danger me-2"></i>
+                <strong>Legacy Dependencies:</strong> 14 trusts still running end-of-life Lorenzo systems
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-exclamation-circle text-danger me-2"></i>
+                <strong>Implementation Delays:</strong> Sheffield postponed £85M Oracle go-live
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="border border-success rounded p-3">
+            <h5 class="text-success mb-3">Market Opportunities</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                <strong>Cloud Migration:</strong> MEDITECH Expanse leading cloud-native adoption
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                <strong>Open Source:</strong> openMAXIMS offering vendor-neutral alternative
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                <strong>Integration Focus:</strong> Shared care records driving ICS collaboration
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detailed Vendor Profiles -->
+  <h2 class="text-primary mb-4">
+    <i class="fas fa-building me-2"></i>Detailed Vendor Profiles
+  </h2>
+
+  {% for vendor in vendor_data.vendors_expose %}
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-white">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h3 class="h4 mb-1 text-primary">{{ vendor.vendor }}</h3>
+          <div class="text-muted">
+            <strong>{{ vendor.product }}</strong> 
+            <span class="badge bg-secondary ms-2">Est. {{ vendor.product_founded }}</span>
+          </div>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <div class="h5 text-success mb-0">{{ vendor.footprint_patients | divided_by: 1000000.0 | round: 1 }}M patients</div>
+          <div class="small text-muted">Patient footprint</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card-body">
+      <!-- Market Segments -->
+      <div class="mb-3">
+        {% for segment in vendor.segments %}
+        <span class="badge bg-primary me-1">{{ segment }}</span>
+        {% endfor %}
+      </div>
+
+      <!-- Market Focus & History -->
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <h5 class="text-secondary mb-2">Market Focus</h5>
+          <p class="mb-0">{{ vendor.market_focus }}</p>
+        </div>
+        <div class="col-md-6">
+          <h5 class="text-secondary mb-2">Company Background</h5>
+          <p class="mb-0">{{ vendor.history }}</p>
+        </div>
+      </div>
+
+      <!-- Clinical Assessment -->
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <div class="border border-success rounded p-3 h-100">
+            <h6 class="text-success mb-2">
+              <i class="fas fa-plus-circle me-1"></i>Market Strength
+            </h6>
+            <p class="mb-2">{{ vendor.strength_text }}</p>
+            {% if vendor.strength_source %}
+            <div class="small text-muted">
+              <strong>Evidence sources:</strong>
+              {% for source in vendor.strength_source %}
+              <a href="{{ source }}" target="_blank" rel="noopener" class="text-decoration-none me-2">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="border border-warning rounded p-3 h-100">
+            <h6 class="text-warning mb-2">
+              <i class="fas fa-exclamation-triangle me-1"></i>Market Challenge
+            </h6>
+            <p class="mb-2">{{ vendor.weakness_text }}</p>
+            {% if vendor.weakness_source %}
+            <div class="small text-muted">
+              <strong>Evidence sources:</strong>
+              {% for source in vendor.weakness_source %}
+              <a href="{{ source }}" target="_blank" rel="noopener" class="text-decoration-none me-2">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <!-- Contract Intelligence -->
+      {% assign vendor_deals = vendor_data.deal_information | where: "vendor", vendor.vendor %}
+      {% if vendor_deals.size > 0 %}
+      <div class="border-top pt-3">
+        <h6 class="text-secondary mb-3">Contract Intelligence</h6>
+        <div class="row g-2">
+          {% for deal in vendor_deals.first.cost_evidence limit: 3 %}
+          <div class="col-md-4">
+            <div class="card border-0 bg-light">
+              <div class="card-body p-3">
+                <h6 class="card-title small text-truncate">{{ deal.provider }}</h6>
+                <div class="mb-1">
+                  {% if deal.cost == "unknown" %}
+                  <span class="badge bg-secondary">Undisclosed</span>
+                  {% elsif deal.cost < 0 %}
+                  <span class="text-success fw-bold small">Savings: £{{ deal.cost | abs | number_with_delimiter }}k</span>
+                  {% else %}
+                  <span class="text-primary fw-bold small">£{{ deal.cost | number_with_delimiter }}</span>
+                  {% endif %}
+                </div>
+                {% if deal.start %}
+                <div class="small text-muted">{{ deal.start | date: "%b %Y" }}</div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Technical Documentation -->
+      {% if vendor.screenshot_links %}
+      <div class="border-top pt-3 mt-3">
+        <h6 class="text-secondary mb-2">Technical Resources</h6>
+        <div class="row g-2">
+          {% for link in vendor.screenshot_links limit: 3 %}
+          <div class="col-md-4">
+            <a href="{{ link }}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm w-100 text-start">
+              <i class="fas fa-file-alt me-2"></i>
+              <span class="text-truncate d-inline-block" style="max-width: 150px;">
+                {{ link | replace: 'https://', '' | replace: 'http://', '' | truncate: 30 }}
+              </span>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+
+  <!-- Market Intelligence Footer -->
+  <div class="alert alert-light border mt-5">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <small class="text-muted">
+          <strong>Market Intelligence:</strong> This analysis combines public procurement data, vendor disclosures, 
+          and market research. Contract values and deployment figures should be independently verified during procurement.
+        </small>
+      </div>
+      <div class="col-md-4 text-md-end">
+        <small class="text-muted">
+          <strong>Last updated:</strong> {{ "now" | date: "%B %Y" }}<br>
+          <strong>Data sources:</strong> Contracts Finder, vendor reports, NHS Digital
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Market analysis specific styling */
+.display-1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+/* Table styling for contract data */
+.table th {
+  border-top: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.table td {
+  vertical-align: middle;
+  font-size: 0.875rem;
+}
+
+/* Badge improvements */
+.badge {
+  font-weight: 500;
+  font-size: 0.75em;
+}
+
+/* Risk assessment styling */
+.border-danger {
+  border-color: #dc3545 !important;
+}
+
+.border-success {
+  border-color: #198754 !important;
+}
+
+.border-warning {
+  border-color: #ffc107 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .display-1 {
+    font-size: 2.5rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .h4 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Print optimization */
+@media print {
+  .btn, .alert-info {
+    display: none !important;
+  }
+  
+  .card {
+    border: 1px solid #000 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    margin-bottom: 1rem !important;
+  }
+  
+  .text-primary {
+    color: #000 !important;
+  }
+}
+</style>
