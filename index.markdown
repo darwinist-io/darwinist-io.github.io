@@ -38,6 +38,7 @@ about_items:
     image: "assets/images/letterboxes/clinical-information-system.png"
     strapline: "FHIR-native clinical data and workflow backbone"
     cost: "£1 per patient per year"
+    price: "£1"
     features:
       - "Rapid pathway development"
       - "Built on FHIR UK Core from day one"
@@ -48,7 +49,8 @@ about_items:
   - title: "Radiology Module"
     image: "assets/images/letterboxes/radiology.png"
     strapline: "A single open-standard system for radiology"
-    cost: "+£1 per patient per year"
+    cost: "+£2 per patient per year"
+    price: "£2"
     features:
       - "Built on DicomWeb open standard"
       - "Enables advanced teleradiology workflows"
@@ -61,7 +63,8 @@ about_items:
   - title: "Summary AI Module"
     image: "assets/images/letterboxes/ai_summary.png"
     strapline: "Longitudinal patient record summaries"
-    cost: "+£1 per patient per year"
+    cost: "+£3 per patient per year"
+    price: "£3"
     features:
       - "Clinician-validated summaries"
       - "Discharge notes, letters & care plans"
