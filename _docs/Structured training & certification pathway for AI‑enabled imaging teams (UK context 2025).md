@@ -1,11 +1,11 @@
 ---
 layout: document
 title: "Structured Training & Certification Pathway for AI-Enabled Imaging Teams"
-subtitle: "UK Context 2025 - Comprehensive Framework for Radiologists and Radiographers"
+subtitle: "AI Training Framework for Radiologists and Radiographers"
 date: 2025-05-27
 author: "Darwinist Team"
 tags: ["Medical AI", "Radiology Training", "Healthcare Certification", "Clinical AI Safety", "NHS", "Medical Imaging", "Professional Development"]
-excerpt: "Toronto-based healthcare technology company specializing in FHIR standards and interoperability solutions, offering enterprise-grade platforms for digital transformation including HAPI FHIR, Clinical Quality Intelligence Suite, and Master Data Management for healthcare organizations worldwide."
+excerpt: "A comprehensive framework for training and certifying AI-enabled imaging teams in the UK healthcare context. This pathway ensures radiologists and radiographers are equipped with the skills, knowledge, and governance mechanisms to safely integrate AI into medical imaging while maintaining patient safety and professional accountability."
 ---
 
 ## **Executive Summary**

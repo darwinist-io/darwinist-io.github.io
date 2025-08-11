@@ -6,6 +6,7 @@ date: 2025-05-27
 author: "Darwinist Team"
 tags: ["Open Source", "Business Models", "Commercial Software", "Enterprise Software", "Community Building", "Technology Strategy"]
 excerpt: "Analysis of the commercial open source business model, exploring how companies balance free community offerings with monetized enterprise services through case studies of Ubuntu Linux and Kubernetes."
+hidden: true
 ---
 
 ### **The Commercial Open Source Business Model: Balancing Free and Paid Offerings**

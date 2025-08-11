@@ -6,6 +6,7 @@ date: 2025-05-26
 author: "Darwinist Team"
 tags: ["DICOM", "Radiology AI", "Medical Imaging", "NHS", "Healthcare Technology", "PACS", "Workflow Orchestration"]
 excerpt: "Advanced medical imaging orchestration platform that integrates DICOM routing with automated prior retrieval and AI workflow orchestration, purpose-built for NHS Trust Radiology Departments and seamless integration with AI algorithms."
+
 ---
 
 # Laurel Bridge
