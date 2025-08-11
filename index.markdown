@@ -15,9 +15,6 @@ cards_widget:
   - title: Secure Cloud Deployment
     description: Scalable, compliant, and secure cloud solutions for healthcare.
     image: /assets/images/azure-logo.png
-  - title: Laurel Bridge Software
-    description: Dicom Interoperability and Routing solutions
-    image: /assets/images/laurel-bridge-logo.png
   - title: medDream Radiology Viewer
     description: Zero Footprint, HTML5 medical imaging viewer.
     image: /assets/images/meddream-logo.png
